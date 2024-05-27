@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  api_user: one
+  album_title: MyString
+
+two:
+  api_user: two
+  album_title: MyString
