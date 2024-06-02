@@ -277,3 +277,40 @@ Processing by Api::PhotosController#index as HTML
 Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 19623)
 
 
+Started GET "/" for 127.0.0.1 at 2024-05-28 20:05:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 727)
+Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 6790)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-05-28 20:05:28 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.4ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 0.9ms | Allocations: 19492)
+
+
+Started GET "/" for 127.0.0.1 at 2024-06-02 16:45:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 727)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 6790)
+
+
+Started GET "/api/albums" for 127.0.0.1 at 2024-06-02 16:46:00 +0300
+Processing by Api::AlbumsController#index as HTML
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums"[0m
+  ↳ app/controllers/api/albums_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.5ms | Allocations: 20699)
+
+
+Started GET "/api/photos" for 127.0.0.1 at 2024-06-02 16:46:42 +0300
+Processing by Api::PhotosController#index as HTML
+  [1m[36mApi::Photo Load (0.2ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos"[0m
+  ↳ app/controllers/api/photos_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 16735)
+
+

@@ -1,0 +1,127 @@
+.landing-container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    overflow-y: auto;
+  }
+  .landing-nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    justify-content: space-between;
+    margin: 10px 15px 0px;
+  }
+  .landing-nav-sessions {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+  .landing-nav-register--button {
+    margin: 0 7px;
+    background-color: #f56d05;
+    color: f56d05;
+    padding: 3px 30px;
+    outline: none;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 1.17em;
+  }
+  .landing-nav-register--button:hover {
+    border: 2px solid #f56d05;
+    margin: 0 7px;
+    background: none;
+  }
+  .landing-nav-login--button {
+    margin: 0 7px;
+    color: white;
+    padding: 3px 43px;
+    background: none;
+    outline: none;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1.17em;
+  }
+  .landing-nav-login--button:hover {
+    border: 2px solid #f56d05;
+    background-color: #f56d05;
+    margin: 0 7px;
+  }
+  .landing-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing-message {
+    animation: fadeInRight 1s ease-in-out;
+  }
+  .landing-message h2{
+    /* max-width: 800px; */
+    font-size: 2em;
+    font-weight: 200;
+    color: #FFFFFF;
+  }
+  .landing-message h3{
+    /* max-width: 800px; */
+    font-weight: 200;
+    color: #FFFFFF;
+  }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .landing-message-button--div {
+    display: flex;
+    margin-top: 25px;
+    /* justify-content: center; */
+  }
+  
+  .landing-message--button {
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #f56d05;
+    color: white;
+    outline: none;
+    border: none;
+  
+    font-size: 1.17em;
+    animation: fadeInRight 1s ease-in-out;
+  }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  
