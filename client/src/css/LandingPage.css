@@ -111,17 +111,20 @@
       opacity: 1;
     }
   }
-  @keyframes fadeIn {
+  @keyframes fadeInBottom {
     from {
       opacity: 0;
+      transform: translateY(100%);
     }
     to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
   
-  .fadeIn {
-    animation: fadeIn 1s ease-in-out;
+  .fadeInBottom {
+    animation: fadeInBottom 1s ease-in-out forwards;
   }
+  
   
   

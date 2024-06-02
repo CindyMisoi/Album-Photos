@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        fadeIn: {
+        fadeInBottom: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
       },
       animation: {
-        fadeIn: 'fadeIn 1s ease-in-out',
+        fadeInBottom: 'fadeInBottom 1s ease-in-out',
       },
     },
   },

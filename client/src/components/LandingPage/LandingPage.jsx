@@ -65,7 +65,7 @@ const LandingPage = () => {
 
 
             <div className="bg-gray-400 w-full fixed bottom-0 py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
-          <div className="landing-main-bottom mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 fadeIn">
+          <div className="landing-main-bottom mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 fadeInBottom">
         <div className="landing-main-bottom-icons-container flex flex-col sm:flex-row justify-center sm:justify-between">
             <div className="icon-container mb-4 sm:mb-0 sm:mr-8">
                 <Logo/>
