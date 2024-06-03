@@ -50,6 +50,22 @@ class Api::UsersController < ApplicationController
       render json: @users, status: :ok
     end
 
+    # autologin
+    def show
+      if request.headers['Authorization']
+        token = request.headers['Authorization']&.split(' ')&.last
+        user = User.find_by(auth_token: token)
+        
+        if user
+          render json: user, status: :ok
+          return
+        end
+      end
+    
+      render json: { error: 'Unauthorized' }, status: :unauthorized
+    end
+    
+
   # delete user
     def destroy
         user = Api::User.find(params[:id])

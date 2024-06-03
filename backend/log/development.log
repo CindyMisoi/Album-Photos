@@ -2573,3 +2573,560 @@ Processing by Api::UsersController#index as HTML
 Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 868)
 
 
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-06-03 22:02:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 726)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 6593)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:02:58 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.3ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 19354)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:40 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 834)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:42 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:43 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:44 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 834)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:45 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 834)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:45 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:45 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:46 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:05:46 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:06:01 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:06:02 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 823)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:06:09 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "misoic2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:34:in `google'
+  [1m[36mApi::User Create (0.9ms)[0m  [1m[32mINSERT INTO "api_users" ("name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cindy Misoi"], ["username", "Cindy"], ["email", "misoic2k@gmail.com"], ["created_at", "2024-06-03 19:06:11.330523"], ["updated_at", "2024-06-03 19:06:11.330523"]]
+  ↳ app/controllers/api/users_controller.rb:34:in `google'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:34:in `google'
+Completed 200 OK in 1409ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 6889)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-03 22:06:15 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 946)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:12:18 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "misoic2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1755)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:13:23 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1531)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:19:27 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1678)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:22:04 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1535)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:22:29 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1531)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:23:13 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1532)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:23:50 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1535)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-03 22:24:53 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1531)
+
+
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:42:42 +0300
+Started GET "/photos/user/5" for 127.0.0.1 at 2024-06-03 22:42:42 +0300
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:42:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/photos/user/5"):
+  
+Started GET "/photos/user/5" for 127.0.0.1 at 2024-06-03 22:42:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/photos/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:42:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:42:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:52:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:52:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:52:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:53:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:53:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:53:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:53:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:53:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:53:59 +0300
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:53:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:53:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:54:05 +0300
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:54:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:54:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:54:27 +0300
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:54:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:54:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:54:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:54:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:54:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:54:49 +0300
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:54:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:54:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:54:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:54:51 +0300
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:54:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:56:45 +0300
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:56:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:56:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:57:14 +0300
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:57:14 +0300
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:57:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:57:16 +0300
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:57:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:57:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 22:57:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 22:57:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 22:57:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/user/5" for 127.0.0.1 at 2024-06-03 23:30:38 +0300
+Started GET "/photos/album/null" for 127.0.0.1 at 2024-06-03 23:30:38 +0300
+Started GET "/albums/user/5" for 127.0.0.1 at 2024-06-03 23:30:38 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/albums/user/5"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/photos/album/null"):
+  
+Started POST "/api/sessions" for 127.0.0.1 at 2024-06-03 23:31:05 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "email":"crmisoi2k@gmail.com"
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJhcGlfdXNlcl9pZCI6NSwiZXhwIjoxNzE3NDQ2MjkzfQ.hDmpSGyDwbK9BYBsMJoAJTPHWuz-eEaieoDqFubB-7s"
+}
+Processing by Api::SessionsController#create as */*
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms | Allocations: 5906)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/api/sessions_controller.rb:7:in `create'
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/sessions" for 127.0.0.1 at 2024-06-03 23:32:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "email":"crmisoi2k@gmail.com"
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJhcGlfdXNlcl9pZCI6NSwiZXhwIjoxNzE3NDQ2MjkzfQ.hDmpSGyDwbK9BYBsMJoAJTPHWuz-eEaieoDqFubB-7s"
+}
+Processing by Api::SessionsController#create as */*
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms | Allocations: 5927)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/api/sessions_controller.rb:7:in `create'
+Started POST "/api/sessions" for 127.0.0.1 at 2024-06-03 23:34:15 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"crmisoi2k@gmail.com", "token"=>"[FILTERED]", "session"=>{"email"=>"crmisoi2k@gmail.com", "token"=>"[FILTERED]"}}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:7:in `create'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms | Allocations: 22288)
+
+
+  
+NoMethodError (undefined method `token' for #<Api::User id: 5, name: "Cynthia Misoi", username: "Cynthia", email: "crmisoi2k@gmail.com", created_at: "2024-06-03 17:34:45.576317000 +0000", updated_at: "2024-06-03 17:34:45.576317000 +0000">
+Did you mean?  to_key):
+  
+app/controllers/api/sessions_controller.rb:30:in `valid_token?'
+app/controllers/api/sessions_controller.rb:9:in `create'
+Started POST "/api/sessions" for 127.0.0.1 at 2024-06-03 23:39:41 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"crmisoi2k@gmail.com", "token"=>"[FILTERED]", "session"=>{"email"=>"crmisoi2k@gmail.com", "token"=>"[FILTERED]"}}
+Completed 401 Unauthorized in 1478ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 2519)
+
+
+Started POST "/api/sessions" for 127.0.0.1 at 2024-06-03 23:41:33 +0300
+Processing by Api::SessionsController#create as */*
+  Parameters: {"email"=>"crmisoi2k@gmail.com", "session"=>{"email"=>"crmisoi2k@gmail.com"}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:8:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 4861)
+
+
+Started DELETE "/api/session/5" for 127.0.0.1 at 2024-06-03 23:42:15 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/session/5"):
+  
+Started DELETE "/api/session/1" for 127.0.0.1 at 2024-06-03 23:42:21 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/session/1"):
+  
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started DELETE "/api/sessions/5" for 127.0.0.1 at 2024-06-03 23:44:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#destroy as */*
+  Parameters: {"id"=>"5"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 3238)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.8.3) lib/action_controller/metal/request_forgery_protection.rb:253:in `handle_unverified_request'
+actionpack (7.0.8.3) lib/action_controller/metal/request_forgery_protection.rb:286:in `handle_unverified_request'
+actionpack (7.0.8.3) lib/action_controller/metal/request_forgery_protection.rb:275:in `verify_authenticity_token'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.8.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+actiontext (7.0.8.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.8.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.8.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.8.3) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.8.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.8.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.8.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.8.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.8.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.8.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.8.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.8.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.8.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.9) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.9) lib/rack/etag.rb:27:in `call'
+rack (2.2.9) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.9) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.9) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.9) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8.3) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.9) lib/rack/method_override.rb:24:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8.3) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (7.0.8.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/api/sessions/5" for 127.0.0.1 at 2024-06-03 23:48:14 +0300
+Processing by Api::SessionsController#destroy as */*
+  Parameters: {"id"=>"5"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 500)
+
+
