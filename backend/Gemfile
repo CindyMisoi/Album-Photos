@@ -6,6 +6,22 @@ ruby "3.0.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8", ">= 7.0.8.3"
 
+# verify google tokens
+gem 'google-id-token'
+
+# google oauth
+gem 'googleauth'
+
+#rack-cors
+gem 'rack-cors', require: 'rack/cors'
+
+
+# jwt token
+gem 'jwt'
+
+# Gemfile
+gem 'dotenv-rails', groups: [:development, :test]
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

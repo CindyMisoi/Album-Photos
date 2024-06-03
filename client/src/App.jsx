@@ -1,8 +1,11 @@
 import React from 'react'
-import LandingPage from './components/LandingPage/LandingPage'
+import LandingRoutes from './components/LandingPage/LandingRoutes'
+import { AuthProvider } from "./components/context/AuthContext";
 
 export default function App() {
   return (
-    <LandingPage/>
+    <AuthProvider>
+       <LandingRoutes/>
+    </AuthProvider>
   )
 }

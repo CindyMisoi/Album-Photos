@@ -8,7 +8,7 @@ import { Button } from "@material-ui/core";
 import Logo from "../../assets/Logo";
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import { MdOutlineEmail } from "react-icons/md";
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
     return (
@@ -34,20 +34,15 @@ const LandingPage = () => {
         <div className="landing-container px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 mx-auto">
         <div className="landing-nav-container flex justify-between items-center py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10">
                 <div className="landing-nav-logo" style={{paddingTop: "7px"}}>
-                    {/* <Link to="/"> */}
+                    <Link to="/">
                         <Logo/>
-                    {/* </Link> */}
+                    </Link>
                 </div>
                 <div className="landing-nav-sessions flex flex-row items-center">
                     <div className="mr-2 sm:mr-4">
-                          {/* <Link to="/"> */}
+                          <Link to="/login">
                         <button className="landing-nav-login--button px-3 py-2 text-sm sm:text-base">Login</button>
-                        {/* </Link> */}
-                    </div>
-                    <div>
-                        {/* <Link to="/"> */}
-                        <button className="landing-nav-register--button px-3 py-2 text-sm sm:text-base">Register</button>
-                        {/* </Link> */}
+                        </Link>
                     </div>
                 </div>
 
@@ -58,7 +53,9 @@ const LandingPage = () => {
                 <h2 className="text-lg sm:text-lg lg:text-2lg mb-4 sm:w-2/5 lg:w-3/5">Foto. Where Memories Come to Life</h2>
                 <h3 className="text-sm sm:text-base lg:text-lg mb-4 sm:w-2/5 lg:w-3/5">Each moment captured is a story waiting to be told, and we're here to bring those stories to life. With our expertly crafted photo albums, every smile, every laugh, and every adventure is preserved in stunning detail, ready to be cherished for years to come.</h3>
                 <div className="flex justify-center sm:justify-start">
+                <Link to="/login">
                     <button className="landing-message--button hover:bg-orange-200 text-white font-bold py-2 px-4 rounded-lg text-sm sm:text-base lg:text-lg">Get Started</button>
+                </Link>
                 </div>
             </div>
 
