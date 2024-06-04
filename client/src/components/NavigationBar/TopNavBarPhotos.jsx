@@ -59,57 +59,40 @@ const TopNavBarPhotos = () => {
     navigate("/")
   }
   return (
-    <div className="top-nav-bar-container" style={{}}>
-      <div
-        className="top-nav-bar-left"
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-       <h2 className="text-xl font-bold mb-4 text-gray-800">All Photos</h2>
-      </div>
-      <div className="top-nav-bar-middle"></div>
-      <div className="top-nav-bar-right" style={{}}>
-        <div
-          className="top-nav-icons"
-          style={{ display: "flex", alignItems: "center" }}
-        >
-          <div>
-            <Alert />
-          </div>
-          <div>
-            <Search />
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ padding: "0" }}>
-            <UserAvatar id={sessionStorage.getItem("userId")} />
-          </div>
-          <div>{userState.user.name}</div>
-          <div
-            onClick={handleProfClick}
-            style={{ padding: "0", cursor: "pointer" }}
-          >
-            <i className="arrow"></i>
-          </div>
-        </div>
-
-        <Menu
-          style={{ marginTop: "40px" }}
-          anchorEl={anchorEle}
-          keepMounted
-          open={Boolean(anchorEle)}
-          onClose={handleProfClose}
-        >
-          <MenuItem onClick={handleProfCloseAndLogout} 
-          >Logout</MenuItem>
-        </Menu>
-      </div>
+    <div class="flex justify-between h-16 bg-white shadow-md">
+    <div class="flex flex-col ml-4">
+      <h2 class="text-xl md:text-xl sm:text-lg font-bold mb-4 text-gray-800">All Photos</h2>
     </div>
+    <div class="flex justify-center w-full"></div>
+    <div class="flex justify-end mr-4">
+      <div class="flex items-center">
+        <div class="mr-2">
+          <Search />
+        </div>
+        <div class="mr-2">
+          <Alert />
+        </div>
+      </div>
+      <div class="flex items-center">
+        <div class="mr-2">
+          <UserAvatar id={sessionStorage.getItem("userId")} />
+        </div>
+        <div class="mr-2">{userState.user.name}</div>
+        <div class="cursor-pointer" onClick={handleProfClick}>
+          <i class="arrow"></i>
+        </div>
+      </div>
+      <Menu
+        class="mt-10"
+        anchorEl={anchorEle}
+        keepMounted
+        open={Boolean(anchorEle)}
+        onClose={handleProfClose}
+      >
+        <MenuItem onClick={handleProfCloseAndLogout}>Logout</MenuItem>
+      </Menu>
+    </div>
+  </div>
   );
 };
 
