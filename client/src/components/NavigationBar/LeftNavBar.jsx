@@ -4,6 +4,8 @@ import { RiMenuFoldLine, RiMenuFill } from "react-icons/ri";
 import Logo from "../../assets/Logo";
 import { Link } from "react-router-dom";
 import { IoMdPhotos,IoIosAlbums, IoIosHome } from "react-icons/io";
+import { FaUsersLine } from "react-icons/fa6";
+
 
 const LeftNavBar = ({ showSidebar, sidebar }) => {
   return (
@@ -42,6 +44,18 @@ const LeftNavBar = ({ showSidebar, sidebar }) => {
               <div className="left-nav-bar-link flex items-center">
                 <IoIosHome className="w-6 h-6 mr-2" />
                 <p className="left-nav-bar-link-title">Home</p>
+              </div>
+            </NavLink>
+            <NavLink
+              exact
+              to="/"
+              className={`left-nav-bar-main-link ${
+                location.pathname === "/users" ? "bg-gray-500 text-white" : ""
+              }`}
+            >
+              <div className="left-nav-bar-link flex items-center">
+                <FaUsersLine className="w-6 h-6 mr-2" />
+                <p className="left-nav-bar-link-title">Users</p>
               </div>
             </NavLink>
             <NavLink

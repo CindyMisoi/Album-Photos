@@ -1,16 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from React Router
-import { Context as UserContext } from "../context/store/UserStore";
-import { Context as PhotoContext } from "../context/store/PhotoStore";
-import { Context as AlbumContext } from "../context/store/AlbumStore";
 import TopNavBarHome from "../NavigationBar/TopNavBarHome";
 import apiServer from "../api/apiServer";
-import '../../css/Home.css';
 
 const Home = () => {
-  const [userState] = useContext(UserContext);
-  const [photoState] = useContext(PhotoContext);
-  const [albumState] = useContext(AlbumContext);
   const [users, setUsers] = useState([]);
 
   useEffect(() => {

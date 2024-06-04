@@ -4,7 +4,8 @@ import HomePage from "../components/pages/Home";
 import AlbumsPage from "../components/pages/Albums";
 import AlbumPage from "../components/pages/Album";
 import UserPage from "../components/pages/User";
-import NewPhotosPage from "../components/pages/Photos";
+import Photo from "./pages/Photo";
+import Photos from "./pages/Photos";
 import "../css/Navbar.css";
 import LeftNavBar from "./NavigationBar/LeftNavBar";
 
@@ -27,28 +28,8 @@ const AuthRoutes = () => {
     const res = await apiServer.get(`api/users/${id}`);
     await userdispatch({ type: "get_user_info", payload: res.data });
   };
-
-  // // come back to this
-  // const getAlbumPhotos = async () => {
-  //   const id = sessionStorage.getItem("albumId");
-  //   const res = await apiServer.get(`/api/photos`);
-  //   await photodispatch({ type: "get_user_photos", payload: res.data });
-  // };
-
-  // const getUserAlbums = async () => {
-  //   const id = sessionStorage.getItem("userId");
-  //   const res = await apiServer.get(`/api/albums`);
-  //   await albumdispatch({
-  //     type: "get_user_albums",
-  //     payload: res.data,
-  //   });
-  // };
-
   useEffect(() => {
     getUserInfo();
-    // getAlbumPhotos();
-    // getUserAlbums();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -64,10 +45,11 @@ const AuthRoutes = () => {
         >
           <Routes>
             <Route exact path="/" element={<HomePage/>} />
-            <Route exact path="/photos" element={<NewPhotosPage/>} />
+            <Route exact path="/photos" element={<Photos/>} />
             <Route exact path="/albums" element={<AlbumsPage />} />
-            <Route exact path="/users/:userId" element={<UserPage/>} />
-            <Route exact path="/albums/:albumId" element={<AlbumPage />} />
+            <Route exact path="/photos/:id" element={<Photo/>} />
+            <Route exact path="/users/:id" element={<UserPage/>} />
+            <Route exact path="/albums/:id" element={<AlbumPage />} />
             <Route path = "*" element = {<h1>404 - Not Found</h1>}/>
           </Routes>
         </div>
