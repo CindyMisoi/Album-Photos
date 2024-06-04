@@ -44,7 +44,7 @@ const AuthRoutes = () => {
           }
         >
           <Routes>
-            <Route exact path="/" element={<HomePage/>} />
+            <Route exact path="/" element={<HomePage/>}/>
             <Route exact path="/photos" element={<Photos/>} />
             <Route exact path="/albums" element={<AlbumsPage />} />
             <Route exact path="/photos/:id" element={<Photo/>} />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import apiServer from "../api/apiServer";
-import TopNavBar from "../NavigationBar/TopNavBarAlbum";
+import TopNavBar from "../NavigationBar/TopNavBar";
 
 const Photo = () => {
   const { id } = useParams();
@@ -43,7 +43,6 @@ const Photo = () => {
       <div className="container mx-auto px-4 py-8">
         {photoData ? (
           <div>
-            <h2 className="text-xl font-bold mb-4 text-gray-800">Edit Photo Selected</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               <div className="bg-white rounded-lg shadow-md p-2 transition duration-300 ease-in-out transform hover:scale-110 relative">
                 {/* Editable photo title */}

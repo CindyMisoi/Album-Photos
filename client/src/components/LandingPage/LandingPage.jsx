@@ -9,6 +9,8 @@ import Logo from "../../assets/Logo";
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import { MdOutlineEmail } from "react-icons/md";
 import { Link } from 'react-router-dom'
+import { IoMdLogIn } from "react-icons/io";
+
 
 const LandingPage = () => {
     return (
@@ -40,8 +42,10 @@ const LandingPage = () => {
                 </div>
                 <div className="landing-nav-sessions flex flex-row items-center">
                     <div className="mr-2 sm:mr-4">
-                          <Link to="/login">
-                        <button className="landing-nav-login--button px-3 py-2 text-sm sm:text-base">Login</button>
+                        <Link to="/login">
+                         <button className="landing-nav-login--button inline-flex items-center px-3 py-2 text-sm sm:text-base">Login
+                            <IoMdLogIn className="ml-2" />
+                        </button>                        
                         </Link>
                     </div>
                 </div>

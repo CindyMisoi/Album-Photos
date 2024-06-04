@@ -37,49 +37,48 @@ const LeftNavBar = ({ showSidebar, sidebar }) => {
             <NavLink
               exact
               to="/"
-              className={`left-nav-bar-main-link ${
-                location.pathname === "/" ? "bg-gray-500 text-white" : ""
-              }`}
+              className={({ isActive }) =>
+                isActive? 'left-nav-bar-main-link bg-gray-500 text-white' : 'left-nav-bar-main-link'
+              }
             >
               <div className="left-nav-bar-link flex items-center">
                 <IoIosHome className="w-6 h-6 mr-2" />
                 <p className="left-nav-bar-link-title">Home</p>
               </div>
             </NavLink>
-            <NavLink
-              exact
-              to="/"
-              className={`left-nav-bar-main-link ${
-                location.pathname === "/users" ? "bg-gray-500 text-white" : ""
-              }`}
-            >
-              <div className="left-nav-bar-link flex items-center">
-                <FaUsersLine className="w-6 h-6 mr-2" />
-                <p className="left-nav-bar-link-title">Users</p>
-              </div>
-            </NavLink>
-            <NavLink
-              to="/photos"
-              className={`left-nav-bar-main-link ${
-                location.pathname === "/photos" ? "bg-gray-500 text-white" : ""
-              }`}
-            >
-              <div className="left-nav-bar-link flex items-center">
-                <IoMdPhotos className="w-6 h-6 mr-2" />
-                <p className="left-nav-bar-link-title">My Photos</p>
-              </div>
-            </NavLink>
-            <NavLink
-              to="/albums"
-              className={`left-nav-bar-main-link ${
-                location.pathname === "/albums" ? "bg-gray-500 text-white" : ""
-              }`}
-            >
-              <div className="left-nav-bar-link flex items-center">
-                <IoIosAlbums className="w-6 h-6 mr-2" />
-                <p className="left-nav-bar-link-title">Albums</p>
-              </div>
-            </NavLink>
+            {/* <NavLink
+            to="/users"
+            className={({ isActive }) =>
+              isActive? 'left-nav-bar-main-link bg-gray-500 text-white' : 'left-nav-bar-main-link'
+            }
+          >
+            <div className="left-nav-bar-link flex items-center">
+              <IoIosAlbums className="w-6 h-6 mr-2" />
+              <p className="left-nav-bar-link-title">Users</p>
+            </div>
+          </NavLink> */}
+           <NavLink
+            to="/photos"
+            className={({ isActive }) =>
+              isActive? 'left-nav-bar-main-link bg-gray-500 text-white' : 'left-nav-bar-main-link'
+            }
+          >
+            <div className="left-nav-bar-link flex items-center">
+              <IoMdPhotos className="w-6 h-6 mr-2" />
+              <p className="left-nav-bar-link-title">Photos</p>
+            </div>
+          </NavLink>
+          <NavLink
+            to="/albums"
+            className={({ isActive }) =>
+              isActive? 'left-nav-bar-main-link bg-gray-500 text-white' : 'left-nav-bar-main-link'
+            }
+          >
+            <div className="left-nav-bar-link flex items-center">
+              <IoIosAlbums className="w-6 h-6 mr-2" />
+              <p className="left-nav-bar-link-title">Albums</p>
+            </div>
+          </NavLink>
           </div>
         </div>
         </div>

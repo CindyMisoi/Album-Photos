@@ -1,51 +1,64 @@
-import React, {useContext, useState} from "react";
-import { Context as UserContext } from "../context/store/UserStore";
-import { Context as PhotoContext } from "../context/store/PhotoStore";
-import { Context as AlbumContext } from "../context/store/AlbumStore";
-// import TaskItemHome from "../tasks/TaskItemHome";
-import TopNavBarAlbums from "../NavigationBar/TopNavBarHome";
-// import ProjectTile from "../projects/ProjectTile";
-// import NewProjectTile from "../projects/NewProjectTile";
-import Add from "../../assets/Add";
-import { Link } from "react-router-dom";
-// import AddProjectPopOut from "../PopOutMenu/AddProjectPopOut";
-// import AddTaskPopOutTaskPage from "../PopOutMenu/AddTaskPopOutTaskPage";
-// import PopOutTaskDetailsHome from "../PopOutMenu/PopOutTaskDetailsHome";
+import React, { useEffect, useState } from "react";
+import TopNavBarAlbums from "../NavigationBar/TopNavBarAlbums";
+import apiServer from "../api/apiServer"; // Import your api server
+import { Link } from 'react-router-dom';
 
 const Albums = () => {
-  // debugger;
-  const [userState] = useContext(UserContext);
-  const [photoState] = useContext(PhotoContext);
-  const [albumState] = useContext(AlbumContext);
-  const [sideTaskForm, setSideTaskForm] = useState(false);
-  const [sideProjectForm, setSideProjectForm] = useState(false);
-  const [sideTaskDetails, setSideTaskDetails] = useState(false);
-  const showSideTaskForm = () => {
-    setSideTaskDetails(false);
-    setSideProjectForm(false);
-    setSideTaskForm(!sideTaskForm);
-  };
+  const [albumsData, setAlbumsData] = useState([]);
 
-  const showSideProjectForm = () => {
-    setSideTaskDetails(false);
-    setSideTaskForm(false);
-    setSideProjectForm(!sideProjectForm);
-  };
+  useEffect(() => {
+    const fetchAlbumsData = async () => {
+      try {
+        const response = await apiServer.get(`/api/albums`);
+        const albumsData = response.data;
+        console.log(albumsData);
+        // Sort albums by creation date (assuming the API response contains a 'createdAt' field)
+        albumsData.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+        setAlbumsData(albumsData);
+      } catch (error) {
+        console.error('Error fetching album data:', error);
+      }
+    };
 
-  const showSideTaskDetails = () => {
-    setSideTaskForm(false);
-    setSideProjectForm(false);
-    setSideTaskDetails(!sideTaskDetails);
-  };
-
-
-  
+    fetchAlbumsData();
+  }, []); // Fetch album data when component mounts
 
   return (
-    <>
+    <div className="bg-gray-100 min-h-screen">
       <TopNavBarAlbums />
-    </>
+      <div className="container mx-auto px-4 py-8">
+        {albumsData? (
+          <div>
+            {/* Display user's albums */}
+            {albumsData.length > 0? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {albumsData.map(album => (
+                  <Link
+                    key={album.id}
+                    to={`/albums/${album.id}`}
+                    className="bg-white rounded-lg shadow-md p-2 transition duration-300 ease-in-out transform hover:scale-110"
+                  >
+                    <p className="text-md font-semibold">{album.album_title}</p>
+                    <p className="text-xs text-gray-500">Created At: {album.created_at}</p>
+                    <div className="aspect-w-1 aspect-h-1">
+                      <img
+                        src={album.album_thumbnail}
+                        alt={album.album_title}
+                        className="object-cover rounded"
+                      />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <p>No albums.</p>
+            )}
+          </div>
+        ) : (
+          <p>Loading user data...</p>
+        )}
+      </div>
+    </div>
   );
 };
-
 export default Albums;

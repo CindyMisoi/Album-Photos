@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../context/AuthContextt";
+import { AuthContext } from "../context/AuthContext";
 import { Context as UserContext } from "../context/store/UserStore";
 import { Context as PhotoContext } from "../context/store/PhotoStore";
 import "../../css/Navbar.css";
@@ -14,6 +14,7 @@ const TopNavBarPhotos = () => {
   const [userState, userdispatch] = useContext(UserContext);
   const { name } = userState.user;
   const [photoState, photodispatch] = useContext(PhotoContext);
+  const numPhoto = photoState.api_photos;
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEle, setAnchorEle] = useState(null);
@@ -63,7 +64,7 @@ const TopNavBarPhotos = () => {
         className="top-nav-bar-left"
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <div style={{ fontSize: "20px" }}>{name}'s Photos</div>
+       <h2 className="text-xl font-bold mb-4 text-gray-800">All Photos</h2>
       </div>
       <div className="top-nav-bar-middle"></div>
       <div className="top-nav-bar-right" style={{}}>

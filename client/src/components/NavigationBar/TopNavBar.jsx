@@ -62,7 +62,7 @@ const TopNavBar = ({ name }) => {
     // >
     <div className="top-nav-bar-container">
       <div className="top-nav-bar-left">
-        <h2>{name}</h2>
+      <h2 className="text-xl font-bold mb-4 text-gray-800">Edit Photo Selected</h2>
       </div>
       <div className="top-nav-bar-middle"></div>
       <div className="top-nav-bar-right" style={{}}>

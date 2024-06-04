@@ -13,6 +13,8 @@ const LoginForm = () => {
   const [demoLoading, setDemoLoading] = useState(false);
   const { setAuth } = useContext(AuthContext);
 
+  const navigate = useNavigate();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -74,6 +76,8 @@ const LoginForm = () => {
         sessionStorage.setItem("username", res.data.user.username);
         sessionStorage.setItem("name", res.data.user.name);
         console.log("User authenticated successfully:", res.data);
+        navigate("/");
+        window.location.reload();
 
         // Handle successful authentication, e.g., save token, redirect, etc.
     } catch (err) {

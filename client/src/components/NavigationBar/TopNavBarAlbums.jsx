@@ -64,7 +64,8 @@ const TopNavBarAlbums = () => {
         className="top-nav-bar-left"
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <div style={{ fontSize: "20px" }}>{name}'s Albums</div>
+      <h2 className="text-xl font-bold mb-4 text-gray-800">All Albums</h2>
+
       </div>
       <div className="top-nav-bar-middle"></div>
       <div className="top-nav-bar-right" style={{}}>

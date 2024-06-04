@@ -8,7 +8,7 @@ import Alert from "../../assets/alert";
 import { Context as UserContext } from "../context/store/UserStore";
 import { useNavigate } from "react-router";
 
-const TopNavBar = ({ name }) => {
+const TopNavBarAlbum = ({albumName}) => {
   const { logout } = useContext(AuthContext);
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -62,7 +62,7 @@ const TopNavBar = ({ name }) => {
     // >
     <div className="top-nav-bar-container">
       <div className="top-nav-bar-left">
-        <h2>{name}</h2>
+      <h2 className="text-xl font-bold mb-4 text-gray-800">{albumName} Photos</h2>
       </div>
       <div className="top-nav-bar-middle"></div>
       <div className="top-nav-bar-right" style={{}}>
@@ -111,4 +111,4 @@ const TopNavBar = ({ name }) => {
   );
 };
 
-export default TopNavBar;
+export default TopNavBarAlbum;
