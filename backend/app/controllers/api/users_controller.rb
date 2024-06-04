@@ -47,23 +47,24 @@ class Api::UsersController < ApplicationController
     # show all users
     def index
       @users = Api::User.all
-      render json: @users, status: :ok
+      if @users
+        render json: @users.as_json(include: { api_albums: {} }), status: :ok
+      else
+        render json: { error: 'Users Not Found' }, status: :not_found 
+      end
+
     end
 
     # autologin
     def show
-      if request.headers['Authorization']
-        token = request.headers['Authorization']&.split(' ')&.last
-        user = User.find_by(auth_token: token)
-        
-        if user
-          render json: user, status: :ok
-          return
-        end
+      user = Api::User.find_by(id: params[:id])
+      if user
+        render json: user, status: :ok
+      else
+        render json: { error: 'not Found' }, status: :not_found 
       end
-    
-      render json: { error: 'Unauthorized' }, status: :unauthorized
     end
+    
     
 
   # delete user
