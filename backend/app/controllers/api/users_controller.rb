@@ -59,7 +59,7 @@ class Api::UsersController < ApplicationController
     def show
       user = Api::User.find_by(id: params[:id])
       if user
-        render json: user, status: :ok
+        render json: user.as_json(include: { api_albums: {} }), status: :ok
       else
         render json: { error: 'not Found' }, status: :not_found 
       end
