@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import apiServer from "../api/apiServer"; // Import your apiServer configuration
 import axios from "axios"; // Import axios for making HTTP requests
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,7 +12,6 @@ const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   const [demoLoading, setDemoLoading] = useState(false);
   const { setAuth } = useContext(AuthContext);
-
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -64,15 +64,24 @@ const LoginForm = () => {
     setAuth(Jwt_token); // Update authentication context with the JWT token
 
     try {
-      // Send token to server for validation
-      const res = await apiServer.post("/api/users/google", { token: Jwt_token });
-      console.log("User authenticated successfully:", res.data);
-      // Handle successful authentication, e.g., save token, redirect, etc.
+        // Send token to server for validation
+        const res = await apiServer.post("/api/users/google", { token: Jwt_token });
+
+        // Store user data in session storage
+        sessionStorage.setItem("user", JSON.stringify(res.data));
+        sessionStorage.setItem("userId", res.data.user.id);
+        sessionStorage.setItem("email", res.data.user.email);
+        sessionStorage.setItem("username", res.data.user.username);
+        sessionStorage.setItem("name", res.data.user.name);
+        console.log("User authenticated successfully:", res.data);
+
+        // Handle successful authentication, e.g., save token, redirect, etc.
     } catch (err) {
-      console.error("Authentication error:", err);
-      // Handle authentication error
+        console.error("Authentication error:", err);
+        // Handle authentication error
     }
-  };
+};
+
 
   const CLIENT_ID = "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com";
 

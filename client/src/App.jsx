@@ -1,11 +1,20 @@
 import React from 'react'
-import LandingRoutes from './components/LandingPage/LandingRoutes'
+import Routes from './components/Routes';
+import UserStore from './components/context/store/UserStore';
+import AlbumStore from './components/context/store/AlbumStore';
+import PhotoStore from './components/context/store/PhotoStore';
 import { AuthProvider } from "./components/context/AuthContext";
 
 export default function App() {
   return (
     <AuthProvider>
-       <LandingRoutes/>
+      <UserStore>
+        <AlbumStore>
+          <PhotoStore>
+           <Routes/>
+          </PhotoStore>
+        </AlbumStore>
+      </UserStore>
     </AuthProvider>
   )
 }

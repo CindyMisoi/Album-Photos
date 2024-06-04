@@ -92,6 +92,7 @@ const LandingPage = () => {
                     </a>
                 </div>
             </div>
+
             <div className="icon-container">
                 <div className="email-wrapper">
                     <h2 className="text-lg font-semibold text-gray-800 mb-2">Email:</h2>
