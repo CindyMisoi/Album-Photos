@@ -7,4 +7,5 @@ module.exports = {
     'plugin:react-hooks/recommended',
   ],
   parserOptions: { ecmaVersion: '2020', sourceType: 'module' },
+  settings: { react: { version: '17.0.2' } },
 };
