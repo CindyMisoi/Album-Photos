@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_27_213550) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_04_015057) do
   create_table "api_albums", force: :cascade do |t|
     t.integer "api_user_id", null: false
     t.string "album_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "album_thumbnail"
     t.index ["api_user_id"], name: "index_api_albums_on_api_user_id"
   end
 

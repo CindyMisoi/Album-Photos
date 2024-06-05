@@ -1,12 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import Routes from './components/Routes';
+import UserStore from './components/context/store/UserStore';
+import AlbumStore from './components/context/store/AlbumStore';
+import PhotoStore from './components/context/store/PhotoStore';
+import { AuthProvider } from "./components/context/AuthContext";
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <AuthProvider>
+      <UserStore>
+        <AlbumStore>
+          <PhotoStore>
+           <Routes/>
+          </PhotoStore>
+        </AlbumStore>
+      </UserStore>
+    </AuthProvider>
   )
 }
