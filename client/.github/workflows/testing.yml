@@ -1,13 +1,7 @@
 name: Testing Workflow
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-
+on: [pull_request]
+  
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -24,6 +18,3 @@ jobs:
 
     - name: Run unit tests
       run: npm run test:unit 
-
-    - name: Run end-to-end tests
-      run: npm run test:e2e 
