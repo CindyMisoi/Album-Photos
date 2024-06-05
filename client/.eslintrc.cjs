@@ -31,6 +31,12 @@ module.exports = {
       rules: {
         'testing-library/no-dom-import': 'off'
       }
+    },
+    {
+      files: ['src/components/NavigationBar/Users.test.jsx'],
+      rules: {
+        'no-unused-vars': 'off'
+      }
     }
   ]
 };
