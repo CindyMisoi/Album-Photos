@@ -9,10 +9,7 @@ import Alert from "../../assets/alert";
 import { useNavigate } from "react-router-dom";
 
 const TopNavBarAlbums = () => {
-  if (!AuthContext) {
-    throw new Error('AuthContext is not provided');
-  }
-  const { logout } = AuthContext;  
+  const { logout } = useContext(AuthContext);
   const [userState, userdispatch] = useContext(UserContext);
 
   const [anchorEle, setAnchorEle] = useState(null);
