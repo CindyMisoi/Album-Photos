@@ -8,7 +8,7 @@ import Photo from "./pages/Photo";
 import Photos from "./pages/Photos";
 import "../css/Navbar.css";
 import LeftNavBar from "./NavigationBar/LeftNavBar";
-import apiServer from "../components/api/api";
+import apiServer from "../components/api/apiServer";
 import { Context as UserContext } from "../components/context/store/UserStore";
 
 

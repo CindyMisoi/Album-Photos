@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TopNavBarAlbums from "../NavigationBar/TopNavBarAlbums";
-import apiServer from "../api/api"; // Import your api server
+import apiServer from "../api/apiServer"; // Import your api server
 
 const Albums = () => {
   const [albumsData, setAlbumsData] = useState([]);

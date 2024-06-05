@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext, useCallback } from "react";
-import apiServer from "../api/api";
+import apiServer from "../api/apiServer";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -68,7 +68,7 @@ const LoginForm = () => {
       console.error("Authentication error:", err);
       // Handle authentication error
     }
-  }, [setAuth]);
+  }, [setAuth,navigate]);
   
   useEffect(() => {
     if (typeof window.google !== "undefined") {

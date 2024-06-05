@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import TopNavBarAlbum from '../NavigationBar/TopNavBarAlbum';
 import { useParams } from 'react-router-dom';
-import apiServer from '../api/api';
+import apiServer from '../api/apiServer';
 import { Link } from 'react-router-dom';
 
 const Album = () => {

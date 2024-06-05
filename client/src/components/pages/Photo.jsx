@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import apiServer from "../api/api";
+import apiServer from "../api/apiServer";
 import TopNavBar from "../NavigationBar/TopNavBar";
 
 const Photo = () => {

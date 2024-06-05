@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import TopNavBarUser from '../NavigationBar/TopNavBarUser';
-import apiServer from '../api/api';
+import apiServer from '../api/apiServer';
 import { Link } from 'react-router-dom';
 
 const User = () => {
