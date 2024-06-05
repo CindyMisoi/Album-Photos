@@ -12,42 +12,8 @@ const TopNavBarUser = ({userName}) => {
   const { logout } = useContext(AuthContext);
   const [userState, userdispatch] = useContext(UserContext);
 
-  const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEle, setAnchorEle] = useState(null);
-  const [openProject, setOpenProject] = useState(false);
-  const [openTask, setOpenTask] = useState(false);
-  const username = sessionStorage.getItem("username");
   const navigate = useNavigate();
-
-  // useEffect(()=>{
-  //   (async()=>{
-  //     const user = await apiServer.get("/user")
-  //   })();
-  // },[])
-
-  const clickOpenTask = () => {
-    setOpenTask(true);
-    handleNewClose();
-  };
-
-  const clickCloseTask = () => {
-    setOpenTask(false);
-  };
-
-  const clickOpenProject = () => {
-    setOpenProject(true);
-    handleNewClose();
-  };
-  const clickCloseProject = () => {
-    setOpenProject(false);
-  };
-
-  const handleNewClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleNewClose = () => {
-    setAnchorEl(null);
-  };
 
   const handleProfClick = (event) => {
     setAnchorEle(event.currentTarget);
@@ -79,7 +45,7 @@ const TopNavBarUser = ({userName}) => {
         <div class="mr-2">
           <UserAvatar id={sessionStorage.getItem("userId")} />
         </div>
-        <div class="mr-2">{userState.user.name}</div>
+        <div class="mr-2 mt-1 text-xs">{userState.user.name}</div>
         <div class="cursor-pointer" onClick={handleProfClick}>
           <i class="arrow"></i>
         </div>

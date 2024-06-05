@@ -12,39 +12,9 @@ import { useNavigate } from "react-router";
 const TopNavBarPhotos = () => {
   const { logout } = useContext(AuthContext);
   const [userState, userdispatch] = useContext(UserContext);
-  const { name } = userState.user;
-  const [photoState, photodispatch] = useContext(PhotoContext);
-  const numPhoto = photoState.api_photos;
 
-  const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEle, setAnchorEle] = useState(null);
-  const [openProject, setOpenProject] = useState(false);
-  const [openTask, setOpenTask] = useState(false);
   const navigate = useNavigate();
-
-  const clickOpenTask = () => {
-    setOpenTask(true);
-    handleNewClose();
-  };
-
-  const clickCloseTask = () => {
-    setOpenTask(false);
-  };
-
-  const clickOpenProject = () => {
-    setOpenProject(true);
-    handleNewClose();
-  };
-  const clickCloseProject = () => {
-    setOpenProject(false);
-  };
-
-  const handleNewClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleNewClose = () => {
-    setAnchorEl(null);
-  };
 
   const handleProfClick = (event) => {
     setAnchorEle(event.currentTarget);
@@ -77,7 +47,7 @@ const TopNavBarPhotos = () => {
         <div class="mr-2">
           <UserAvatar id={sessionStorage.getItem("userId")} />
         </div>
-        <div class="mr-2">{userState.user.name}</div>
+        <div class="mr-2 mt-1 text-xs">{userState.user.name}</div>
         <div class="cursor-pointer" onClick={handleProfClick}>
           <i class="arrow"></i>
         </div>

@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Logo";
 import { MdKeyboardBackspace } from "react-icons/md";
 import LoginForm from "../../components/Forms/LoginForm";
 import { Link } from 'react-router-dom';

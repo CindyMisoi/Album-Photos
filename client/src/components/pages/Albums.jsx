@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TopNavBarAlbums from "../NavigationBar/TopNavBarAlbums";
 import apiServer from "../api/apiServer"; // Import your api server
-import { Link } from 'react-router-dom';
 
 const Albums = () => {
   const [albumsData, setAlbumsData] = useState([]);
@@ -25,29 +24,25 @@ const Albums = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <TopNavBarAlbums />
+      <TopNavBarAlbums/>
       <div className="container mx-auto px-4 py-8">
-        {albumsData? (
+        {albumsData ? (
           <div>
             {/* Display user's albums */}
-            {albumsData.length > 0? (
+            {albumsData.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {albumsData.map(album => (
-                  <Link
-                    key={album.id}
-                    to={`/albums/${album.id}`}
-                    className="bg-white rounded-lg shadow-md p-2 transition duration-300 ease-in-out transform hover:scale-110"
-                  >
-                    <p className="text-md font-semibold">{album.album_title}</p>
-                    <p className="text-xs text-gray-500">Created At: {album.created_at}</p>
-                    <div className="aspect-w-1 aspect-h-1">
-                      <img
-                        src={album.album_thumbnail}
-                        alt={album.album_title}
-                        className="object-cover rounded"
-                      />
+                    <div className="bg-white rounded-lg shadow-md p-2 transition duration-300 ease-in-out transform hover:scale-110">
+                      <p className="text-md font-semibold">{album.album_title}</p>
+                      <p className="text-xs text-gray-500">Created At: {album.created_at}</p>
+                      <div className="aspect-w-1 aspect-h-1">
+                        <img
+                          src={album.album_thumbnail}
+                          alt={album.album_title}
+                          className="object-cover rounded"
+                        />
+                      </div>
                     </div>
-                  </Link>
                 ))}
               </div>
             ) : (
