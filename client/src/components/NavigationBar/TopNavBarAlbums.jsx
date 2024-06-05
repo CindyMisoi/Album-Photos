@@ -1,16 +1,15 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Context as UserContext } from "../context/store/UserStore";
-import { Context as PhotoContext } from "../context/store/PhotoStore";
 import UserAvatar from "./UserAvatar";
-import { Menu, MenuItem } from "@material-ui/core";
+import { Menu, MenuItem } from "@mui/material";
 import Search from "../../assets/search";
 import Alert from "../../assets/alert";
 import { useNavigate } from "react-router-dom";
 
 const TopNavBarAlbums = () => {
   const { logout } = useContext(AuthContext);
-  const [userState, userdispatch] = useContext(UserContext);
+  const [userState] = useContext(UserContext);
 
   const [anchorEle, setAnchorEle] = useState(null);
   const navigate = useNavigate();

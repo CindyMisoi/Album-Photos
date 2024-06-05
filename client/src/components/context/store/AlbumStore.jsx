@@ -1,5 +1,7 @@
-import React, { createContext, useReducer } from "react";
+import { createContext, useReducer } from "react";
 import Reducer from "../reducer/AlbumReducer";
+import PropTypes from 'prop-types';
+
 
 const initialState = {
   api_albums: [],
@@ -12,6 +14,9 @@ const AlbumStore = ({ children }) => {
       {children}
     </Context.Provider>
   );
+};
+AlbumStore.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export const Context = createContext(initialState);

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../css/Navbar.css";
 import apiServer from "../api/apiServer";
+import PropTypes from 'prop-types';
 
-const UserAvatar = ({ id, name, email }) => {
+
+const UserAvatar = ({ id, name }) => {
   const [loading, setLoading] = useState(true);
   const [initials, setInitials] = useState("NA");
 
@@ -48,6 +50,12 @@ const UserAvatar = ({ id, name, email }) => {
 
   return <div className="user-avatar">{initials}</div>;
 };
-
+UserAvatar.propTypes = {
+  id: PropTypes.func.isRequired,
+  name: PropTypes.func.isRequired,
+};
+UserAvatar.defaultProps = {
+  name: '',
+};
 export default UserAvatar;
 

@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import apiServer from "../api/apiServer"; // Import your apiServer configuration
-import axios from "axios"; // Import axios for making HTTP requests
+import { useState, useEffect, useContext, useCallback } from "react";
+import apiServer from "../api/apiServer";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +9,6 @@ const LoginForm = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [loginIdentifier, setLoginIdentifier] = useState("");
   const [loading, setLoading] = useState(false);
-  const [demoLoading, setDemoLoading] = useState(false);
   const { setAuth } = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -26,14 +24,14 @@ const LoginForm = () => {
 
     setLoading(true);
 
-    try {
-      // Send the login request to the server to validate credentials and generate session token
-      const res = await apiServer.post("/login", { loginIdentifier });
-      // Handle successful login
-    } catch (err) {
-      setLoading(false);
-      setErrorMessage("The provided credentials were invalid");
-    }
+    // try {
+    //   // Send the login request to the server to validate credentials and generate session token
+    //   const res = await apiServer.post("/login", { loginIdentifier });
+    //   // Handle successful login
+    // } catch (err) {
+    //   setLoading(false);
+    //   setErrorMessage("The provided credentials were invalid");
+    // }
   };
 
   const handleLoginIdentifierChange = (e) => {
@@ -43,6 +41,35 @@ const LoginForm = () => {
   };
 
 
+  const handleCredentialResponse = useCallback(async (response, setAuth) => {
+    const Jwt_token = response.credential;
+    console.log("Encoded JWT ID token: " + Jwt_token);
+  
+    // Store token in session storage
+    sessionStorage.setItem("Jwt_token", Jwt_token);
+    setAuth(Jwt_token); // Update authentication context with the JWT token
+  
+    try {
+      // Send token to server for validation
+      const res = await apiServer.post("/api/users/google", { token: Jwt_token });
+  
+      // Store user data in session storage
+      sessionStorage.setItem("user", JSON.stringify(res.data));
+      sessionStorage.setItem("userId", res.data.user.id);
+      sessionStorage.setItem("email", res.data.user.email);
+      sessionStorage.setItem("username", res.data.user.username);
+      sessionStorage.setItem("name", res.data.user.name);
+      console.log("User authenticated successfully:", res.data);
+      navigate("/");
+      window.location.reload();
+  
+      // Handle successful authentication, e.g., save token, redirect, etc.
+    } catch (err) {
+      console.error("Authentication error:", err);
+      // Handle authentication error
+    }
+  }, [navigate]);
+  
   useEffect(() => {
     if (typeof window.google !== "undefined") {
       window.google.accounts.id.initialize({
@@ -55,36 +82,7 @@ const LoginForm = () => {
         { theme: "outline", size: "large" }
       );
     }
-  }, []);
-
-  const handleCredentialResponse = async (response, setAuth) => {
-    const Jwt_token = response.credential;
-    console.log("Encoded JWT ID token: " + Jwt_token);
-
-    // Store token in session storage
-    sessionStorage.setItem("Jwt_token", Jwt_token);
-    setAuth(Jwt_token); // Update authentication context with the JWT token
-
-    try {
-        // Send token to server for validation
-        const res = await apiServer.post("/api/users/google", { token: Jwt_token });
-
-        // Store user data in session storage
-        sessionStorage.setItem("user", JSON.stringify(res.data));
-        sessionStorage.setItem("userId", res.data.user.id);
-        sessionStorage.setItem("email", res.data.user.email);
-        sessionStorage.setItem("username", res.data.user.username);
-        sessionStorage.setItem("name", res.data.user.name);
-        console.log("User authenticated successfully:", res.data);
-        navigate("/");
-        window.location.reload();
-
-        // Handle successful authentication, e.g., save token, redirect, etc.
-    } catch (err) {
-        console.error("Authentication error:", err);
-        // Handle authentication error
-    }
-};
+  }, [handleCredentialResponse, setAuth]);
 
 
   const CLIENT_ID = "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com";
