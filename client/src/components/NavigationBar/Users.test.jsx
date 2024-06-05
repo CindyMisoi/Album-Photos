@@ -27,4 +27,19 @@ describe('UserAvatar', () => {
     render(<UserAvatar id="1" name="" />);
     expect(screen.getByText('Loading..')).toBeInTheDocument();
   });
+
+  it('renders the correct initials when name is provided', () => {
+    render(<UserAvatar id="1" name="Jane Doe" />);
+    expect(screen.getByText('JD')).toBeInTheDocument();
+  });
+
+  it('renders the correct initials when name is provided with multiple words', () => {
+    render(<UserAvatar id="1" name="John Smith Doe" />);
+    expect(screen.getByText('JS')).toBeInTheDocument();
+  });
+
+  it('renders the correct initials when name is provided with a single word', () => {
+    render(<UserAvatar id="1" name="John" />);
+    expect(screen.getByText('J')).toBeInTheDocument();
+  });
 });
