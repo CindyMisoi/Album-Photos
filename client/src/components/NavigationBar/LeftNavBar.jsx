@@ -1,10 +1,8 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { RiMenuFoldLine, RiMenuFill } from "react-icons/ri";
 import Logo from "../../assets/Logo";
 import { Link } from "react-router-dom";
 import { IoMdPhotos,IoIosAlbums, IoIosHome } from "react-icons/io";
-import { FaUsersLine } from "react-icons/fa6";
 
 
 const LeftNavBar = ({ showSidebar, sidebar }) => {

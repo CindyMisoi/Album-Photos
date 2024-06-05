@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../css/Navbar.css";
 import apiServer from "../api/apiServer";
 
-const UserAvatar = ({ id, name, email }) => {
+const UserAvatar = ({ id, name }) => {
   const [loading, setLoading] = useState(true);
   const [initials, setInitials] = useState("NA");
 

@@ -1,10 +1,6 @@
 import React from "react";
 import "../../css/LandingPage.css";
 import photo from "../../assets/photo-album.jpg";
-import { BsCardChecklist } from "react-icons/bs";
-import { AiOutlineTeam } from "react-icons/ai";
-import { MdAssignment } from "react-icons/md";
-import { Button } from "@material-ui/core";
 import Logo from "../../assets/Logo";
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import { MdOutlineEmail } from "react-icons/md";
@@ -58,12 +54,10 @@ const LandingPage = () => {
                 <h3 className="text-sm sm:text-base lg:text-lg mb-4 sm:w-2/5 lg:w-3/5">Each moment captured is a story waiting to be told, and we're here to bring those stories to life. With our expertly crafted photo albums, every smile, every laugh, and every adventure is preserved in stunning detail, ready to be cherished for years to come.</h3>
                 <div className="flex justify-center sm:justify-start">
                 <Link to="/login">
-                    <button className="landing-message--button hover:bg-orange-200 text-white font-bold py-2 px-4 rounded-lg text-sm sm:text-base lg:text-lg">Get Started</button>
+                <button className="landing-message--button hover:bg-orange-200 text-white font-bold py-2 px-4 rounded-lg text-sm sm:text-base lg:text-lg">Get Started</button>
                 </Link>
                 </div>
             </div>
-
-
 
             <div className="bg-gray-400 w-full fixed bottom-0 py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
           <div className="landing-main-bottom mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 fadeInBottom">

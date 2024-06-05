@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import apiServer from "../api/apiServer"; // Import your apiServer configuration
-import axios from "axios"; // Import axios for making HTTP requests
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +9,6 @@ const LoginForm = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [loginIdentifier, setLoginIdentifier] = useState("");
   const [loading, setLoading] = useState(false);
-  const [demoLoading, setDemoLoading] = useState(false);
   const { setAuth } = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -26,14 +24,14 @@ const LoginForm = () => {
 
     setLoading(true);
 
-    try {
-      // Send the login request to the server to validate credentials and generate session token
-      const res = await apiServer.post("/login", { loginIdentifier });
-      // Handle successful login
-    } catch (err) {
-      setLoading(false);
-      setErrorMessage("The provided credentials were invalid");
-    }
+    // try {
+    //   // Send the login request to the server to validate credentials and generate session token
+    //   const res = await apiServer.post("/login", { loginIdentifier });
+    //   // Handle successful login
+    // } catch (err) {
+    //   setLoading(false);
+    //   setErrorMessage("The provided credentials were invalid");
+    // }
   };
 
   const handleLoginIdentifierChange = (e) => {

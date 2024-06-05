@@ -1,7 +1,6 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Context as UserContext } from "../context/store/UserStore";
-import { Context as PhotoContext } from "../context/store/PhotoStore";
 import UserAvatar from "./UserAvatar";
 import { Menu, MenuItem } from "@material-ui/core";
 import Search from "../../assets/search";

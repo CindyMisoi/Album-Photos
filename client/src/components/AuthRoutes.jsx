@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "../components/pages/Home";
 import AlbumsPage from "../components/pages/Albums";
@@ -8,11 +8,6 @@ import Photo from "./pages/Photo";
 import Photos from "./pages/Photos";
 import "../css/Navbar.css";
 import LeftNavBar from "./NavigationBar/LeftNavBar";
-
-import { Context as UserContext } from "./context/store/UserStore";
-import { Context as PhotoContext } from "./context/store/PhotoStore";
-import { Context as AlbumContext } from "./context/store/AlbumStore";
-
 import apiServer from "../components/api/apiServer";
 
 const AuthRoutes = () => {

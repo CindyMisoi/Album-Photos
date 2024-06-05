@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TopNavBarAlbums from "../NavigationBar/TopNavBarAlbums";
 import apiServer from "../api/apiServer"; // Import your api server
 
