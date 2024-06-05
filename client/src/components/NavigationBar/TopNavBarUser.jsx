@@ -31,8 +31,7 @@ const TopNavBarUser = ({userName}) => {
   return (
     <div className="flex justify-between h-16 bg-white shadow-md&rsquo;">
     <div className="flex flex-col ml-4">
-      <h2 className="text-xl md:text-xl sm:text-lg font-bold mb-4 text-gray-800">{userName}'s Albums</h2>
-    </div>
+    <h2 className="text-xl md:text-xl sm:text-lg font-bold mb-4 text-gray-800">{userName}&rsquo;s Albums</h2>    </div>
     <div className="flex justify-center w-full"></div>
     <div className="flex justify-end mr-4">
       <div className="flex items-center">
