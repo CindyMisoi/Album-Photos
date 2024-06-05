@@ -23,20 +23,7 @@ module.exports = {
     'testing-library/no-node-access': 'warn',
     'testing-library/no-container': 'warn',
     'testing-library/no-debugging-utils': 'warn',
-    'testing-library/no-dom-import': 'off'
+    'testing-library/no-dom-import': 'off',
+    'no-unused-vars': 'off'
   },
-  overrides: [
-    {
-      files: ['src/components/pages/**/*.test.js'],
-      rules: {
-        'testing-library/no-dom-import': 'off'
-      }
-    },
-    {
-      files: ['src/components/NavigationBar/Users.test.jsx'],
-      rules: {
-        'no-unused-vars': 'off'
-      }
-    }
-  ]
 };
