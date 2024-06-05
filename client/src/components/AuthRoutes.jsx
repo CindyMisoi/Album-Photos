@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "../components/pages/Home";
 import AlbumsPage from "../components/pages/Albums";
@@ -18,9 +18,6 @@ import apiServer from "../components/api/apiServer";
 const AuthRoutes = () => {
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
-  const [photoState, photodispatch] = useContext(PhotoContext);
-  const [userState, userdispatch] = useContext(UserContext);
-  const [albumState, albumdispatch] = useContext(AlbumContext);
 
   // //Maybe grab all information here and state goes down to child components?
   const getUserInfo = async () => {
