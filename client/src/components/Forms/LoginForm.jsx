@@ -1,5 +1,5 @@
-import { useState, useEffect, useContext } from "react";
-import apiServer from "../api/apiServer"; // Import your apiServer configuration
+import { useState, useEffect, useContext, useCallback } from "react";
+import apiServer from "../api/api";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -41,47 +41,48 @@ const LoginForm = () => {
   };
 
 
-  const handleCredentialResponse = async (response, setAuth) => {
+  const handleCredentialResponse = useCallback(async (response, setAuth) => {
     const Jwt_token = response.credential;
     console.log("Encoded JWT ID token: " + Jwt_token);
-
+  
     // Store token in session storage
     sessionStorage.setItem("Jwt_token", Jwt_token);
     setAuth(Jwt_token); // Update authentication context with the JWT token
-
+  
     try {
-        // Send token to server for validation
-        const res = await apiServer.post("/api/users/google", { token: Jwt_token });
-
-        // Store user data in session storage
-        sessionStorage.setItem("user", JSON.stringify(res.data));
-        sessionStorage.setItem("userId", res.data.user.id);
-        sessionStorage.setItem("email", res.data.user.email);
-        sessionStorage.setItem("username", res.data.user.username);
-        sessionStorage.setItem("name", res.data.user.name);
-        console.log("User authenticated successfully:", res.data);
-        navigate("/");
-        window.location.reload();
-
-        // Handle successful authentication, e.g., save token, redirect, etc.
+      // Send token to server for validation
+      const res = await apiServer.post("/api/users/google", { token: Jwt_token });
+  
+      // Store user data in session storage
+      sessionStorage.setItem("user", JSON.stringify(res.data));
+      sessionStorage.setItem("userId", res.data.user.id);
+      sessionStorage.setItem("email", res.data.user.email);
+      sessionStorage.setItem("username", res.data.user.username);
+      sessionStorage.setItem("name", res.data.user.name);
+      console.log("User authenticated successfully:", res.data);
+      navigate("/");
+      window.location.reload();
+  
+      // Handle successful authentication, e.g., save token, redirect, etc.
     } catch (err) {
-        console.error("Authentication error:", err);
-        // Handle authentication error
+      console.error("Authentication error:", err);
+      // Handle authentication error
     }
-};
-      useEffect(() => {
-        if (typeof window.google !== "undefined") {
-          window.google.accounts.id.initialize({
-            client_id: CLIENT_ID,
-            callback: (response) => handleCredentialResponse(response, setAuth),
-            cancel_on_tap_outside: false,
-          });
-          window.google.accounts.id.renderButton(
-            document.getElementById("signInDiv"),
-            { theme: "outline", size: "large" }
-          );
-        }
-      }, [handleCredentialResponse, setAuth]);
+  }, [setAuth]);
+  
+  useEffect(() => {
+    if (typeof window.google !== "undefined") {
+      window.google.accounts.id.initialize({
+        client_id: CLIENT_ID,
+        callback: (response) => handleCredentialResponse(response, setAuth),
+        cancel_on_tap_outside: false,
+      });
+      window.google.accounts.id.renderButton(
+        document.getElementById("signInDiv"),
+        { theme: "outline", size: "large" }
+      );
+    }
+  }, [handleCredentialResponse, setAuth]);
 
 
   const CLIENT_ID = "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com";

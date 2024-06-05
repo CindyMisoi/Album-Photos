@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TopNavBarPhotos from "../NavigationBar/TopNavBarPhotos";
-import apiServer from "../api/apiServer"; // Import your api server
+import apiServer from "../api/api"; // Import your api server
 import { Link } from "react-router-dom";
 
 const Albums = () => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../css/Navbar.css";
-import apiServer from "../api/apiServer";
+import apiServer from "../api/api";
 import PropTypes from 'prop-types';
 
 
