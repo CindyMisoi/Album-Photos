@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import { Context as UserContext } from "../context/store/UserStore";
 import "../../css/Navbar.css";
 import UserAvatar from "./UserAvatar";
-import { Menu, MenuItem } from "@mui/material";
+// import { Menu, MenuItem } from "@mui/material";
 import Search from "../../assets/search";
 import Alert from "../../assets/alert";
 import { useNavigate } from "react-router";
