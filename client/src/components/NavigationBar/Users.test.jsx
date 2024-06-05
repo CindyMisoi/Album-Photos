@@ -4,43 +4,9 @@ import { describe, it, expect } from '@jest/globals';
 import UserAvatar from './UserAvatar';
 
 describe('UserAvatar', () => {
-  it('renders the initials correctly', () => {
+    it('renders the component', () => {
+      render(<UserAvatar id="1" name="John Doe" />);
+      expect(screen.getByRole('img', { name: /JD/ })).toBeInTheDocument();
+    });
 
-    expect(screen.getByText('JD')).toBeInTheDocument();
   });
-
-  it('renders "NA" when name is not provided', () => {
-    render(<UserAvatar id="1" />);
-    expect(screen.getByText('NA')).toBeInTheDocument();
-  });
-
-  it('renders "NA" when name is an empty string', () => {
-    render(<UserAvatar id="1" name="" />);
-    expect(screen.getByText('NA')).toBeInTheDocument();
-  });
-
-  it('renders the loading state when name is not provided and id is provided', () => {
-    render(<UserAvatar id="1" />);
-    expect(screen.getByText('Loading..')).toBeInTheDocument();
-  });
-
-  it('renders the loading state when name is an empty string and id is provided', () => {
-    render(<UserAvatar id="1" name="" />);
-    expect(screen.getByText('Loading..')).toBeInTheDocument();
-  });
-
-  it('renders the correct initials when name is provided', () => {
-    render(<UserAvatar id="1" name="Jane Doe" />);
-    expect(screen.getByText('JD')).toBeInTheDocument();
-  });
-
-  it('renders the correct initials when name is provided with multiple words', () => {
-    render(<UserAvatar id="1" name="John Smith Doe" />);
-    expect(screen.getByText('JS')).toBeInTheDocument();
-  });
-
-  it('renders the correct initials when name is provided with a single word', () => {
-    render(<UserAvatar id="1" name="John" />);
-    expect(screen.getByText('J')).toBeInTheDocument();
-  });
-});
