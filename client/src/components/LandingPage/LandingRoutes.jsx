@@ -1,4 +1,3 @@
-import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import LoginPage from "./LoginPage";
 import LandingPage from "./LandingPage";
@@ -12,7 +11,7 @@ const LandingRoutes = () => {
         <Route
           path="/*"
           render={() => {
-            return <Redirect to="/" />;
+            return <Route to="/" />;
           }}
         />
       </Routes>

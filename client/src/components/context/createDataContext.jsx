@@ -1,4 +1,6 @@
-import React, { useReducer, createContext } from "react";
+import { useReducer, createContext } from "react";
+import PropTypes from 'prop-types';
+
 
 const createDataContext = (reducer, actions, initialState) => {
   const Context = createContext();
@@ -10,6 +12,10 @@ const createDataContext = (reducer, actions, initialState) => {
     for (let key in actions) {
       boundActions[key] = actions[key](dispatch);
     }
+
+    Provider.propTypes = {
+      children: PropTypes.node.isRequired,
+    };
 
     return (
       <Context.Provider value={{ state, ...boundActions }}>

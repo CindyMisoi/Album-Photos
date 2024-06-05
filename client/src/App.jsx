@@ -1,4 +1,3 @@
-import React from 'react'
 import Routes from './components/Routes';
 import UserStore from './components/context/store/UserStore';
 import AlbumStore from './components/context/store/AlbumStore';

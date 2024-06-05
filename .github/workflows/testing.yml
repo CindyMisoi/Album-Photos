@@ -1,0 +1,29 @@
+name: Linting and Unit Tests
+
+on:
+  push:
+    branches:
+      - development
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+  
+      - name: Install dependencies
+        working-directory: ./client
+        run: npm install
+  
+      - name: Run linting
+        working-directory: ./client
+        run: npm run lint
+  
+      - name: Run unit tests
+        working-directory: ./client
+        run: npm run test:unit

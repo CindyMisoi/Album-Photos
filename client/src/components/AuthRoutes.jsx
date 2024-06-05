@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import { useContext,useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "../components/pages/Home";
 import AlbumsPage from "../components/pages/Albums";
@@ -8,19 +8,15 @@ import Photo from "./pages/Photo";
 import Photos from "./pages/Photos";
 import "../css/Navbar.css";
 import LeftNavBar from "./NavigationBar/LeftNavBar";
+import apiServer from "./api/apiServer";
+import { Context as UserContext } from "../components/context/store/UserStore";
 
-import { Context as UserContext } from "./context/store/UserStore";
-import { Context as PhotoContext } from "./context/store/PhotoStore";
-import { Context as AlbumContext } from "./context/store/AlbumStore";
-
-import apiServer from "../components/api/apiServer";
 
 const AuthRoutes = () => {
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
-  const [photoState, photodispatch] = useContext(PhotoContext);
-  const [userState, userdispatch] = useContext(UserContext);
-  const [albumState, albumdispatch] = useContext(AlbumContext);
+
+  const [userdispatch] = useContext(UserContext);
 
   // //Maybe grab all information here and state goes down to child components?
   const getUserInfo = async () => {
@@ -30,7 +26,7 @@ const AuthRoutes = () => {
   };
   useEffect(() => {
     getUserInfo();
-  }, []);
+  });
 
   return (
     <div className="overlay">
