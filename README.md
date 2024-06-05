@@ -92,10 +92,10 @@
 * [![React][React.js]][React-url]
 * [![Ruby][Ruby Badge]][Ruby-url]
 * [![PostgreSQL][PostgreSQL Badge]][PostgreSQL-url]
-* [![Tailwind CSS][Tailwind.css]][Tailwind-url]
-* [![HTML5][HTML5.com]][HTML5-url]
-* [![CSS3][CSS3.com]][CSS3-url]
-* [![JavaScript][JavaScript.com]][JavaScript-url]
+* [![Tailwind CSS][https://badgen.net/npm/v/tailwindcss]][https://tailwindcss.com/]
+* [![HTML5][https://badgen.net/badge/HTML5/CSS3/blue]][https://html.spec.whatwg.org/multipage/]
+* [![CSS3][https://badgen.net/badge/CSS3/Styled/blue]][https://www.w3.org/Style/CSS/Overview.en.html]
+* [![JavaScript][https://badgen.net/badge/JavaScript/ES6+/blue]][https://www.javascript.com/]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
