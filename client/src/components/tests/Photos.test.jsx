@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { describe, it } from '@jest/globals';
-import UserAvatar from './UserAvatar';
+import Photos from '../../components/pages/Photos';
 
-describe('UserAvatar', () => {
+describe('Photos', () => {
     it('renders the component', () => {
-      render(<UserAvatar id="1" name="John Doe" />);
+      render(<Photos/>);
     });
 
   });
