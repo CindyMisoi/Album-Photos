@@ -16,7 +16,7 @@ const AuthRoutes = () => {
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
 
-  const [userState, userdispatch] = useContext(UserContext);
+  const [userdispatch] = useContext(UserContext);
 
   // //Maybe grab all information here and state goes down to child components?
   const getUserInfo = async () => {
@@ -26,7 +26,7 @@ const AuthRoutes = () => {
   };
   useEffect(() => {
     getUserInfo();
-  }, []);
+  });
 
   return (
     <div className="overlay">

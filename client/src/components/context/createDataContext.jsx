@@ -13,6 +13,10 @@ const createDataContext = (reducer, actions, initialState) => {
       boundActions[key] = actions[key](dispatch);
     }
 
+    Provider.propTypes = {
+      children: PropTypes.node.isRequired,
+    };
+
     return (
       <Context.Provider value={{ state, ...boundActions }}>
         {children}
@@ -22,7 +26,5 @@ const createDataContext = (reducer, actions, initialState) => {
 
   return { Context, Provider };
 };
-Provider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+
 export default createDataContext;

@@ -50,8 +50,7 @@ const LandingPage = () => {
             <div className="landing-main py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
             <div className="landing-message w-3/5 mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
                 <h2 className="text-lg sm:text-lg lg:text-2lg mb-4 sm:w-2/5 lg:w-3/5">Foto. Where Memories Come to Life</h2>
-                <h3 className="text-sm sm:text-base lg:text-lg mb-4 sm:w-2/5 lg:w-3/5">Each moment captured is a story waiting to be told, and we're here to bring those stories to life. With our expertly crafted photo albums, every smile, every laugh, and every adventure is preserved in stunning detail, ready to be cherished for years to come.</h3>
-                <div className="flex justify-center sm:justify-&rsquo;start">
+                <h3 className="text-sm sm:text-base lg:text-lg mb-4 sm:w-2/5 lg:w-3/5">Each moment captured is a story waiting to be told, and we&rsquo;re here to bring those stories to life. With our expertly crafted photo albums, every smile, every laugh, and every adventure is preserved in stunning detail, ready to be cherished for years to come.</h3>                <div className="flex justify-center sm:justify-&rsquo;start">
                 <Link to="/login">
                 <button className="landing-message--button hover:bg-orange-200 text-white font-bold py-2 px-4 rounded-lg text-sm sm:text-base lg:text-lg">Get Started</button>
                 </Link>

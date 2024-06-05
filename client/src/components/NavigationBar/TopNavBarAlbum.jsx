@@ -14,7 +14,7 @@ const TopNavBarAlbum = ({albumName}) => {
   const { logout } = useContext(AuthContext);
 
   const [anchorEle, setAnchorEle] = useState(null);
-  const [userState, userdispatch] = useContext(UserContext);
+  const [userState] = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleProfClick = (event) => {
