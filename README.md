@@ -89,7 +89,7 @@
 * [![React][React.js]][React-url]
 * [![Ruby][Ruby Badge]][Ruby-url]
 * [![PostgreSQL][PostgreSQL Badge]][PostgreSQL-url]
-* [![Tailwind CSS][https://badgen.net/npm/v/tailwindcss]][https://tailwindcss.com/]
+* [![Tailwind CSS][https://badgen.net/badge/Tailwind%20CSS/3.0.2/green]][https://tailwindcss.com/]
 * [![HTML5][https://badgen.net/badge/HTML5/CSS3/blue]][https://html.spec.whatwg.org/multipage/]
 * [![CSS3][https://badgen.net/badge/CSS3/Styled/blue]][https://www.w3.org/Style/CSS/Overview.en.html]
 * [![JavaScript][https://badgen.net/badge/JavaScript/ES6+/blue]][https://www.javascript.com/]
