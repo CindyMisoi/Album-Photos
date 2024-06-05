@@ -1,10 +1,11 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from '@jest/globals';
 import UserAvatar from './UserAvatar';
 
 describe('UserAvatar', () => {
   it('renders the initials correctly', () => {
-    render(<UserAvatar id="1" name="John Doe" />);
+
     expect(screen.getByText('JD')).toBeInTheDocument();
   });
 
