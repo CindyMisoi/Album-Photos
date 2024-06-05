@@ -211,8 +211,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/CindyMisoi/Album-Photos](https://github.com/CindyMisoi/Album-Photos)
-Email: crmisoi2k@gmail.com
+Project Link: [https://github.com/CindyMisoi/Album-Photos](https://github.com/CindyMisoi/Album-Photos) - Email: crmisoi2k@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -236,7 +235,7 @@ Email: crmisoi2k@gmail.com
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[foto]: images/screenshot.png
+[foto]: images/foto.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Ruby Badge]: https://img.shields.io/badge/Ruby-CC0000?style=for-the-badge&logo=ruby&logoColor=white
