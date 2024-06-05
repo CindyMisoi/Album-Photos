@@ -11,7 +11,7 @@ import { useNavigate } from "react-router";
 const TopNavBar = () => {
   const { logout } = useContext(AuthContext);
   const [anchorEle, setAnchorEle] = useState(null);
-  const [userState, userdispatch] = useContext(UserContext);
+  const [userState] = useContext(UserContext);
   const navigate = useNavigate();
 
 

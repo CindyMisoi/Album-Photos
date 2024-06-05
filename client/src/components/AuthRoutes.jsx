@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useContext,useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "../components/pages/Home";
 import AlbumsPage from "../components/pages/Albums";
@@ -9,10 +9,14 @@ import Photos from "./pages/Photos";
 import "../css/Navbar.css";
 import LeftNavBar from "./NavigationBar/LeftNavBar";
 import apiServer from "../components/api/apiServer";
+import { Context as UserContext } from "../components/context/store/UserStore";
+
 
 const AuthRoutes = () => {
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
+
+  const [userState, userdispatch] = useContext(UserContext);
 
   // //Maybe grab all information here and state goes down to child components?
   const getUserInfo = async () => {

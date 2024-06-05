@@ -3,6 +3,7 @@ import { RiMenuFoldLine, RiMenuFill } from "react-icons/ri";
 import Logo from "../../assets/Logo";
 import { Link } from "react-router-dom";
 import { IoMdPhotos,IoIosAlbums, IoIosHome } from "react-icons/io";
+import PropTypes from 'prop-types';
 
 
 const LeftNavBar = ({ showSidebar, sidebar }) => {
@@ -102,5 +103,8 @@ const LeftNavBar = ({ showSidebar, sidebar }) => {
   </div>
   );
 };
-
+LeftNavBar.propTypes = {
+  showSidebar: PropTypes.func.isRequired,
+  sidebar: PropTypes.bool.isRequired,
+};
 export default LeftNavBar;

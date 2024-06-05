@@ -7,6 +7,8 @@ import Search from "../../assets/search";
 import Alert from "../../assets/alert";
 import { Context as UserContext } from "../context/store/UserStore";
 import { useNavigate } from "react-router";
+import PropTypes from 'prop-types';
+
 
 const TopNavBarAlbum = ({albumName}) => {
   const { logout } = useContext(AuthContext);
@@ -66,5 +68,8 @@ const TopNavBarAlbum = ({albumName}) => {
   </div>
   );
 };
-
+// validate props
+TopNavBarAlbum.propTypes = {
+  albumName: PropTypes.func.isRequired,
+};
 export default TopNavBarAlbum;

@@ -1,5 +1,7 @@
 import { createContext, useReducer } from "react";
 import Reducer from "../reducer/PhotoReducer";
+import PropTypes from 'prop-types';
+
 
 const initialState = {
   api_photos: [],
@@ -13,6 +15,10 @@ const PhotoStore = ({ children }) => {
     </Context.Provider>
   );
 };
+PhotoStore.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 
 export const Context = createContext(initialState);
 export default PhotoStore;

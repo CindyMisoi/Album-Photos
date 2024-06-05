@@ -41,20 +41,6 @@ const LoginForm = () => {
   };
 
 
-  useEffect(() => {
-    if (typeof window.google !== "undefined") {
-      window.google.accounts.id.initialize({
-        client_id: CLIENT_ID,
-        callback: (response) => handleCredentialResponse(response, setAuth),
-        cancel_on_tap_outside: false,
-      });
-      window.google.accounts.id.renderButton(
-        document.getElementById("signInDiv"),
-        { theme: "outline", size: "large" }
-      );
-    }
-  }, []);
-
   const handleCredentialResponse = async (response, setAuth) => {
     const Jwt_token = response.credential;
     console.log("Encoded JWT ID token: " + Jwt_token);
@@ -83,6 +69,19 @@ const LoginForm = () => {
         // Handle authentication error
     }
 };
+      useEffect(() => {
+        if (typeof window.google !== "undefined") {
+          window.google.accounts.id.initialize({
+            client_id: CLIENT_ID,
+            callback: (response) => handleCredentialResponse(response, setAuth),
+            cancel_on_tap_outside: false,
+          });
+          window.google.accounts.id.renderButton(
+            document.getElementById("signInDiv"),
+            { theme: "outline", size: "large" }
+          );
+        }
+      }, [handleCredentialResponse, setAuth]);
 
 
   const CLIENT_ID = "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com";

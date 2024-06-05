@@ -10,7 +10,7 @@ import { useNavigate } from "react-router";
 
 const TopNavBarPhotos = () => {
   const { logout } = useContext(AuthContext);
-  const [userState, userdispatch] = useContext(UserContext);
+  const [userState] = useContext(UserContext);
 
   const [anchorEle, setAnchorEle] = useState(null);
   const navigate = useNavigate();

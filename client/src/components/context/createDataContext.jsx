@@ -1,4 +1,6 @@
 import { useReducer, createContext } from "react";
+import PropTypes from 'prop-types';
+
 
 const createDataContext = (reducer, actions, initialState) => {
   const Context = createContext();
@@ -20,5 +22,7 @@ const createDataContext = (reducer, actions, initialState) => {
 
   return { Context, Provider };
 };
-
+Provider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 export default createDataContext;

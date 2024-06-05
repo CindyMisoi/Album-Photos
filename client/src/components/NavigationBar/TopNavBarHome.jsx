@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import "../../css/Navbar.css";
 import UserAvatar from "./UserAvatar";
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router";
 
 const TopNavBarHome = () => {
   const { logout } = useContext(AuthContext);
-  const [userState, userdispatch] = useContext(UserContext);
+  const [userState] = useContext(UserContext);
 
   const [anchorEle, setAnchorEle] = useState(null);
   const navigate = useNavigate();

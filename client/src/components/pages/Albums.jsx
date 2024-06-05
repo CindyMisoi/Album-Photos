@@ -32,7 +32,7 @@ const Albums = () => {
             {albumsData.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {albumsData.map(album => (
-                    <div className="bg-white rounded-lg shadow-md p-2 transition duration-300 ease-in-out transform hover:scale-110">
+                    <div key={album.id} className="bg-white rounded-lg shadow-md p-2 transition duration-300 ease-in-out transform hover:scale-110">
                       <p className="text-md font-semibold">{album.album_title}</p>
                       <p className="text-xs text-gray-500">Created At: {album.created_at}</p>
                       <div className="aspect-w-1 aspect-h-1">

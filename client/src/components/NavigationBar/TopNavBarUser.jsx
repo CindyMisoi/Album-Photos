@@ -7,10 +7,12 @@ import Search from "../../assets/search";
 import Alert from "../../assets/alert";
 import { Context as UserContext } from "../context/store/UserStore";
 import { useNavigate } from "react-router";
+import PropTypes from 'prop-types';
+
 
 const TopNavBarUser = ({userName}) => {
   const { logout } = useContext(AuthContext);
-  const [userState, userdispatch] = useContext(UserContext);
+  const [userState] = useContext(UserContext);
 
   const [anchorEle, setAnchorEle] = useState(null);
   const navigate = useNavigate();
@@ -27,7 +29,7 @@ const TopNavBarUser = ({userName}) => {
     navigate("/")
   }
   return (
-    <div className="flex justify-between h-16 bg-white shadow-md">
+    <div className="flex justify-between h-16 bg-white shadow-md&rsquo;">
     <div className="flex flex-col ml-4">
       <h2 className="text-xl md:text-xl sm:text-lg font-bold mb-4 text-gray-800">{userName}'s Albums</h2>
     </div>
@@ -62,5 +64,8 @@ const TopNavBarUser = ({userName}) => {
     </div>
   </div>
   );
+};
+TopNavBarUser.propTypes = {
+  userName: PropTypes.func.isRequired,
 };
 export default TopNavBarUser;
