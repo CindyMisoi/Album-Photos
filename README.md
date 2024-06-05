@@ -30,8 +30,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  ![Logo](images/logo.png)
-</div>
+  [![Logo](images/logo.png)](https://github.com/CindyMisoi/Album-Photos)
+</div
 
 <h3 align="center">Foto.</h3>
 
@@ -64,8 +64,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -78,7 +76,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About Foto.
 
-[![Product Name Screen Shot][product-foto]](https://example.com)
+[![Product Name Screen Shot][foto]](https://example.com)
 
 `CindyMisoi`, `Album-Photo`, `crmisoi@gmail.com`,  `Foto`, `Online Photo Gallery.`
 
