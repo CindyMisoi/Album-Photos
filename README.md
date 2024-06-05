@@ -90,9 +90,9 @@
 ### Built With
 
 * [![React][React.js]][React-url]
-* [![Ruby][Ruby.dev]][Ruby-url]
-* [![Postgres][Postgres.io]][Postgres-url]
-* [![Tailwind CSS][Tailwindcss.com]][Tailwind-url]
+* [![Ruby][Ruby Badge]][Ruby-url]
+* [![PostgreSQL][PostgreSQL Badge]][PostgreSQL-url]
+* [![Tailwind CSS][Tailwind.css]][Tailwind-url]
 * [![HTML5][HTML5.com]][HTML5-url]
 * [![CSS3][CSS3.com]][CSS3-url]
 * [![JavaScript][JavaScript.com]][JavaScript-url]
@@ -212,17 +212,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Project Link: [https://github.com/CindyMisoi/Album-Photos](https://github.com/CindyMisoi/Album-Photos)
+Email: crmisoi2k@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,12 +239,11 @@ Project Link: [https://github.com/CindyMisoi/Album-Photos](https://github.com/Ci
 [foto]: images/screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
+[Ruby Badge]: https://img.shields.io/badge/Ruby-CC0000?style=for-the-badge&logo=ruby&logoColor=white
+[Ruby-url]: https://www.ruby-lang.org/
+[PostgreSQL Badge]: https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white
+[PostgreSQL-url]: https://www.postgresql.org/
+[![Tailwind CSS][https://badgen.net/npm/v/@egoist/tailwindcss-icons]][https://tailwindcss.com/]
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
 [Laravel-url]: https://laravel.com
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
