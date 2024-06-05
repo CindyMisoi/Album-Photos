@@ -30,9 +30,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/CindyMisoi/Album-Photos">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  ![Logo](images/logo.png)
+</div>
 
 <h3 align="center">Foto.</h3>
 
