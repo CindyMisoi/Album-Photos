@@ -1,5 +1,5 @@
 export default {
-  setupFilesAfterEnv: ['@testing-library/jest-dom','@testing-library/react'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom', './setupTests.js'],
   testEnvironment: 'jsdom',
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
