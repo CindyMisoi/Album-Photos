@@ -68,7 +68,7 @@ const LoginForm = () => {
       console.error("Authentication error:", err);
       // Handle authentication error
     }
-  });
+  }, [navigate]);
   
   useEffect(() => {
     if (typeof window.google !== "undefined") {
