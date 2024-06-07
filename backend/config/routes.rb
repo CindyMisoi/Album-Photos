@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
-    root :to => 'index#index'
+    root to: 'users#index'
     resources :users, only: [:index, :show, :destroy] do
       collection do
         # Google signin

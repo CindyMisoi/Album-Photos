@@ -42941,3 +42941,92 @@ Processing by Api::UsersController#show as HTML
 Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1461)
 
 
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-06-07 14:22:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 726)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 6618)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:22:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 14:22:26 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 8ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 5798)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 14:22:26 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 609)
+
+
+Started GET "/api/users/" for 127.0.0.1 at 2024-06-07 14:22:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:22:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:22:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:22:57 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 43093)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 14:23:01 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1221)
+
+
+Started GET "/api/users/" for 127.0.0.1 at 2024-06-07 14:23:03 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 3320)
+
+
+Started GET "/api/users/" for 127.0.0.1 at 2024-06-07 14:23:06 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 3333)
+
+
