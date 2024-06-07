@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
+    root :to => 'index#index'
     resources :users, only: [:index, :show, :destroy] do
       collection do
-        get '/google', to: 'users#google'
-        root to: 'users#index'
+        # Google signin
+        post 'google', to: 'users#google'
       end
     end
     resources :sessions, only: [:create, :destroy]
