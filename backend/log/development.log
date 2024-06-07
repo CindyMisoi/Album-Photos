@@ -43333,3 +43333,569 @@ Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 246)
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-06-07 17:42:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 4391)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 17:43:01 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 45588)
+
+
+Started DELETE "/api/users/1" for 127.0.0.1 at 2024-06-07 17:43:35 +0300
+Processing by Api::UsersController#destroy as */*
+  Parameters: {"photo_title"=>"Cindy's Photo-2", "id"=>"1", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:72:in `destroy'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1865)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=1):
+  
+app/controllers/api/users_controller.rb:72:in `destroy'
+Started DELETE "/api/users/2" for 127.0.0.1 at 2024-06-07 17:43:40 +0300
+Processing by Api::UsersController#destroy as */*
+  Parameters: {"photo_title"=>"Cindy's Photo-2", "id"=>"2", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:72:in `destroy'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 929)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=2):
+  
+app/controllers/api/users_controller.rb:72:in `destroy'
+Started DELETE "/api/users/3" for 127.0.0.1 at 2024-06-07 17:43:44 +0300
+Processing by Api::UsersController#destroy as */*
+  Parameters: {"photo_title"=>"Cindy's Photo-2", "id"=>"3", "user"=>{}}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:72:in `destroy'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:80:in `destroy'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 2]]
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Album Destroy (0.2ms)[0m  [1m[31mDELETE FROM "api_albums" WHERE "api_albums"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Album Destroy (0.2ms)[0m  [1m[31mDELETE FROM "api_albums" WHERE "api_albums"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Album Destroy (0.1ms)[0m  [1m[31mDELETE FROM "api_albums" WHERE "api_albums"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 6]]
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Album Destroy (0.3ms)[0m  [1m[31mDELETE FROM "api_albums" WHERE "api_albums"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+  [1m[36mApi::User Destroy (0.2ms)[0m  [1m[31mDELETE FROM "api_users" WHERE "api_users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+Completed 204 No Content in 54ms (ActiveRecord: 22.5ms | Allocations: 14313)
+
+
+Started DELETE "/api/users/4" for 127.0.0.1 at 2024-06-07 17:43:49 +0300
+Processing by Api::UsersController#destroy as */*
+  Parameters: {"photo_title"=>"Cindy's Photo-2", "id"=>"4", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:72:in `destroy'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:80:in `destroy'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mApi::Photo Destroy (0.2ms)[0m  [1m[31mDELETE FROM "api_photos" WHERE "api_photos"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mApi::Photo Destroy (0.1ms)[0m  [1m[31mDELETE FROM "api_photos" WHERE "api_photos"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Album Destroy (0.2ms)[0m  [1m[31mDELETE FROM "api_albums" WHERE "api_albums"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:81:in `block in destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mApi::Album Destroy (0.2ms)[0m  [1m[31mDELETE FROM "api_albums" WHERE "api_albums"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:82:in `block in destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+  [1m[36mApi::User Destroy (0.4ms)[0m  [1m[31mDELETE FROM "api_users" WHERE "api_users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+Completed 204 No Content in 35ms (ActiveRecord: 18.8ms | Allocations: 22805)
+
+
+Started DELETE "/api/users/5" for 127.0.0.1 at 2024-06-07 17:43:54 +0300
+Processing by Api::UsersController#destroy as */*
+  Parameters: {"photo_title"=>"Cindy's Photo-2", "id"=>"5", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:72:in `destroy'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:80:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+  [1m[36mApi::User Destroy (0.1ms)[0m  [1m[31mDELETE FROM "api_users" WHERE "api_users"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:86:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 2.8ms | Allocations: 2499)
+
+
+Started DELETE "/api/users/6" for 127.0.0.1 at 2024-06-07 17:43:58 +0300
+Processing by Api::UsersController#destroy as */*
+  Parameters: {"photo_title"=>"Cindy's Photo-2", "id"=>"6", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:72:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 919)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=6):
+  
+app/controllers/api/users_controller.rb:72:in `destroy'
+Started DELETE "/api/users/7" for 127.0.0.1 at 2024-06-07 17:44:03 +0300
+Processing by Api::UsersController#destroy as */*
+  Parameters: {"photo_title"=>"Cindy's Photo-2", "id"=>"7", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:72:in `destroy'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 916)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=7):
+  
+app/controllers/api/users_controller.rb:72:in `destroy'
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 17:44:11 +0300
+Processing by Api::UsersController#index as */*
+  Parameters: {"photo_title"=>"Cindy's Photo-2", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 612)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "api_albums"[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "api_albums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "api_user_id" integer NOT NULL, "album_title" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "album_thumbnail" varchar)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE INDEX "index_api_albums_on_api_user_id" ON "api_albums" ("api_user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "api_photos"[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "api_photos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "api_album_id" integer NOT NULL, "photo_title" varchar, "image_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE INDEX "index_api_photos_on_api_album_id" ON "api_photos" ("api_album_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "api_users"[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "api_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aapi_albums" ("id" integer NOT NULL PRIMARY KEY, "api_user_id" integer NOT NULL, "album_title" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "album_thumbnail" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aapi_albums_on_api_user_id" ON "aapi_albums" ("api_user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aapi_albums" ("id","api_user_id","album_title","created_at","updated_at","album_thumbnail")
+                     SELECT "id","api_user_id","album_title","created_at","updated_at","album_thumbnail" FROM "api_albums"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "api_albums"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "api_albums" ("id" integer NOT NULL PRIMARY KEY, "api_user_id" integer NOT NULL, "album_title" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "album_thumbnail" varchar DEFAULT NULL, CONSTRAINT "fk_rails_2063996bab"
+FOREIGN KEY ("api_user_id")
+  REFERENCES "api_users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_api_albums_on_api_user_id" ON "api_albums" ("api_user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "api_albums" ("id","api_user_id","album_title","created_at","updated_at","album_thumbnail")
+                     SELECT "id","api_user_id","album_title","created_at","updated_at","album_thumbnail" FROM "aapi_albums"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aapi_albums"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aapi_photos" ("id" integer NOT NULL PRIMARY KEY, "api_album_id" integer NOT NULL, "photo_title" varchar DEFAULT NULL, "image_url" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aapi_photos_on_api_album_id" ON "aapi_photos" ("api_album_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aapi_photos" ("id","api_album_id","photo_title","image_url","created_at","updated_at")
+                     SELECT "id","api_album_id","photo_title","image_url","created_at","updated_at" FROM "api_photos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "api_photos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "api_photos" ("id" integer NOT NULL PRIMARY KEY, "api_album_id" integer NOT NULL, "photo_title" varchar DEFAULT NULL, "image_url" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_acccf1bcf7"
+FOREIGN KEY ("api_album_id")
+  REFERENCES "api_albums" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_api_photos_on_api_album_id" ON "api_photos" ("api_album_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "api_photos" ("id","api_album_id","photo_title","image_url","created_at","updated_at")
+                     SELECT "id","api_album_id","photo_title","image_url","created_at","updated_at" FROM "aapi_photos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aapi_photos"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20240604015057)[0m
+  [1m[35m (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20240527210637),
+(20240527211616),
+(20240527213550);
+
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-06-07 14:44:30.884292"], ["updated_at", "2024-06-07 14:44:30.884292"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "6634e1c7d459a94a7512c9cf12984d2cd3ebc81c"], ["created_at", "2024-06-07 14:44:30.890187"], ["updated_at", "2024-06-07 14:44:30.890187"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "api_albums"[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "api_albums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "api_user_id" integer NOT NULL, "album_title" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "album_thumbnail" varchar)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_api_albums_on_api_user_id" ON "api_albums" ("api_user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "api_photos"[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "api_photos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "api_album_id" integer NOT NULL, "photo_title" varchar, "image_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_api_photos_on_api_album_id" ON "api_photos" ("api_album_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "api_users"[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "api_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aapi_albums" ("id" integer NOT NULL PRIMARY KEY, "api_user_id" integer NOT NULL, "album_title" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "album_thumbnail" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aapi_albums_on_api_user_id" ON "aapi_albums" ("api_user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aapi_albums" ("id","api_user_id","album_title","created_at","updated_at","album_thumbnail")
+                     SELECT "id","api_user_id","album_title","created_at","updated_at","album_thumbnail" FROM "api_albums"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "api_albums"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "api_albums" ("id" integer NOT NULL PRIMARY KEY, "api_user_id" integer NOT NULL, "album_title" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "album_thumbnail" varchar DEFAULT NULL, CONSTRAINT "fk_rails_2063996bab"
+FOREIGN KEY ("api_user_id")
+  REFERENCES "api_users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_api_albums_on_api_user_id" ON "api_albums" ("api_user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "api_albums" ("id","api_user_id","album_title","created_at","updated_at","album_thumbnail")
+                     SELECT "id","api_user_id","album_title","created_at","updated_at","album_thumbnail" FROM "aapi_albums"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aapi_albums"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aapi_photos" ("id" integer NOT NULL PRIMARY KEY, "api_album_id" integer NOT NULL, "photo_title" varchar DEFAULT NULL, "image_url" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aapi_photos_on_api_album_id" ON "aapi_photos" ("api_album_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aapi_photos" ("id","api_album_id","photo_title","image_url","created_at","updated_at")
+                     SELECT "id","api_album_id","photo_title","image_url","created_at","updated_at" FROM "api_photos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "api_photos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "api_photos" ("id" integer NOT NULL PRIMARY KEY, "api_album_id" integer NOT NULL, "photo_title" varchar DEFAULT NULL, "image_url" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_acccf1bcf7"
+FOREIGN KEY ("api_album_id")
+  REFERENCES "api_albums" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_api_photos_on_api_album_id" ON "api_photos" ("api_album_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "api_photos" ("id","api_album_id","photo_title","image_url","created_at","updated_at")
+                     SELECT "id","api_album_id","photo_title","image_url","created_at","updated_at" FROM "aapi_photos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aapi_photos"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20240604015057)[0m
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20240527210637),
+(20240527211616),
+(20240527213550);
+
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-06-07 14:44:30.953533"], ["updated_at", "2024-06-07 14:44:30.953533"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2024-06-07 14:44:30.958031"], ["key", "environment"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "6634e1c7d459a94a7512c9cf12984d2cd3ebc81c"], ["created_at", "2024-06-07 14:44:30.962259"], ["updated_at", "2024-06-07 14:44:30.962259"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-07 17:48:02 +0300
+Started GET "/api/users/null" for 127.0.0.1 at 2024-06-07 17:48:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"null"}
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 9ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 9104)
+
+
+  [1m[36mApi::User Load (0.3ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/users_controller.rb:34:in `google'
+  [1m[36mApi::User Create (0.3ms)[0m  [1m[32mINSERT INTO "api_users" ("name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cynthia Misoi"], ["username", "Cynthia"], ["email", "crmisoi2k@gmail.com"], ["created_at", "2024-06-07 14:48:03.801597"], ["updated_at", "2024-06-07 14:48:03.801597"]]
+  ↳ app/controllers/api/users_controller.rb:34:in `google'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/users_controller.rb:34:in `google'
+Completed 200 OK in 1352ms (Views: 0.6ms | ActiveRecord: 4.3ms | Allocations: 25479)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:48:04 +0300
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 17:48:04 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 12240)
+
+
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 5425)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:48:04 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.3ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1343)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:48:07 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1330)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:48:07 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1327)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 17:48:12 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1382)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mApi::Album Create (0.2ms)[0m  [1m[32mINSERT INTO "api_albums" ("api_user_id", "album_title", "created_at", "updated_at", "album_thumbnail") VALUES (?, ?, ?, ?, ?)[0m  [["api_user_id", 1], ["album_title", "Cynthia's Photos"], ["created_at", "2024-06-07 14:48:41.290413"], ["updated_at", "2024-06-07 14:48:41.290413"], ["album_thumbnail", "https://images.unsplash.com/photo-1594737996820-af7654631790?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D"]]
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mApi::Album Create (0.2ms)[0m  [1m[32mINSERT INTO "api_albums" ("api_user_id", "album_title", "created_at", "updated_at", "album_thumbnail") VALUES (?, ?, ?, ?, ?)[0m  [["api_user_id", 1], ["album_title", "Cat Photos"], ["created_at", "2024-06-07 14:48:41.304328"], ["updated_at", "2024-06-07 14:48:41.304328"], ["album_thumbnail", "https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0fGVufDB8fDB8fHww"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mApi::Album Create (0.2ms)[0m  [1m[32mINSERT INTO "api_albums" ("api_user_id", "album_title", "created_at", "updated_at", "album_thumbnail") VALUES (?, ?, ?, ?, ?)[0m  [["api_user_id", 1], ["album_title", "Dog Photos"], ["created_at", "2024-06-07 14:48:41.311049"], ["updated_at", "2024-06-07 14:48:41.311049"], ["album_thumbnail", "https://images.unsplash.com/photo-1552053831-71594a27632d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fHww"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."album_title" = ? LIMIT ?[0m  [["album_title", "Cynthia's Photos"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mApi::Photo Create (0.1ms)[0m  [1m[32mINSERT INTO "api_photos" ("api_album_id", "photo_title", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["api_album_id", 1], ["photo_title", "Cindy's Photo-1"], ["image_url", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"], ["created_at", "2024-06-07 14:48:41.338141"], ["updated_at", "2024-06-07 14:48:41.338141"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 17:48:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 46321)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:48:58 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 2747)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:48:58 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1745)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:48:58 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.4ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1729)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:48:59 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1763)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 17:48:59 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1798)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:49:01 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1729)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:49:01 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 17ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1729)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:49:02 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1818)
+
+
+Started GET "/api/albums/1" for 127.0.0.1 at 2024-06-07 17:49:02 +0300
+Processing by Api::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/albums_controller.rb:14:in `show'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 1]]
+  ↳ app/controllers/api/albums_controller.rb:16:in `show'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 19355)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 17:49:03 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 1]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1733)
+
+
+Started GET "/api/photos/1" for 127.0.0.1 at 2024-06-07 17:49:03 +0300
+Processing by Api::PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/photos_controller.rb:13:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1371)
+
+
