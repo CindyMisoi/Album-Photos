@@ -43321,3 +43321,15 @@ Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 246)
   [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mApi::Photo Create (0.2ms)[0m  [1m[32mINSERT INTO "api_photos" ("api_album_id", "photo_title", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["api_album_id", 1], ["photo_title", "Cindy's Photo-1"], ["image_url", "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg"], ["created_at", "2024-06-07 13:55:47.532958"], ["updated_at", "2024-06-07 13:55:47.532958"]]
   [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
