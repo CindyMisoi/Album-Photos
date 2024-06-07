@@ -4,8 +4,6 @@ import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 
-const CLIENT_ID = "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com";
-
 
 const LoginForm = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -41,6 +39,8 @@ const LoginForm = () => {
     // Clear the error message when the user starts typing
     setErrorMessage("");
   };
+
+  const CLIENT_ID = "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com";
 
 
   const handleCredentialResponse = useCallback(async (response, setAuth) => {
