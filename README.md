@@ -75,7 +75,8 @@
 
 [![Product Name Screen Shot][foto]](https://example.com)
 
-`CindyMisoi`, `Album-Photo`, `crmisoi@gmail.com`,  `Foto`, `Online Photo Gallery.`
+`deployed link: https://album-photos-eight.vercel.app
+`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
