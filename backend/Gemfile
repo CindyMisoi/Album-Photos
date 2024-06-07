@@ -12,6 +12,8 @@ gem 'google-id-token'
 # google oauth
 gem 'googleauth'
 
+gem 'yaml_db'
+
 #rack-cors
 gem 'rack-cors', require: 'rack/cors'
 
