@@ -14,7 +14,7 @@ module Backend
     config.action_dispatch.cookies_same_site_protection = :strict
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'https://album-photos-nu.vercel.app'
         resource '*',
                  headers: :any,
                  expose: %w(access-token expiry token-type uid client), 
