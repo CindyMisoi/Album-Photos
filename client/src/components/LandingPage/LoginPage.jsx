@@ -8,9 +8,6 @@ function LoginPage() {
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
       <div className="w-full max-w-md mx-auto p-4">
         <div className="flex justify-between items-center mb-8">
-          <Link to="/">
-            <img src={logo} alt="logo" className="w-16 h-16" />
-          </Link>
           <h1 className="font-semibold text-2xl">Welcome!</h1>
         </div>
         <div>
