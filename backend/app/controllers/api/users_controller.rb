@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
         payload = Google::Auth::IDTokens.verify_oidc(token, aud: ENV['GOOGLE_CLIENT_ID'])
     
         # Check audience claim
-        if payload['aud'] != "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com"
+        if payload['aud'] != ENV['GOOGLE_CLIENT_ID']
           render json: { error: 'Invalid audience' }, status: :unauthorized
           return
         end
