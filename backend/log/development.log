@@ -43943,3 +43943,7 @@ Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1371)
   [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
 [dotenv] Set [36mGOOGLE_CLIENT_ID[0m
 [dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mApi::User Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "api_users"[0m
