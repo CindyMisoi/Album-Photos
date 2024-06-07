@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :users, only: [:index, :show, :destroy] do
       collection do
-        # Google signin
-        post 'google', to: 'users#google'
+        get '/google', to: 'users#google'
         root to: 'users#index'
       end
     end
