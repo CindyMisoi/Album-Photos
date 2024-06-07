@@ -1,15 +1,15 @@
 puts "Start seeding..."
 
 # Define the data to be seeded for users
-api_users = [
-  # Add more user data as needed
-  { id: 1, name: "Cynthia Misoi", username: "Cynthia", email: "crmisoi2k@gmail.com" },
-]
+# api_users = [
+#   # Add more user data as needed
+#   { id: 1, name: "Cynthia Misoi", username: "Cynthia", email: "crmisoi2k@gmail.com" },
+# ]
 
-Create users within the Api namespace
-api_users.each do |user_attributes|
-  Api::User.create!(user_attributes)
-end
+# Create users within the Api namespace
+# api_users.each do |user_attributes|
+#   Api::User.create!(user_attributes)
+# end
 
 # Define the data to be seeded for albums
 api_albums = [
