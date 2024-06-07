@@ -42294,3 +42294,1004 @@ Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1461)
 >>>>>>> e1f41ee4e7e0875829c7f39a7ff6b8ba925d64a2
 
 
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-05 17:27:47 +0300
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 17:27:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#index as HTML
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.3ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+Completed 200 OK in 36ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 49116)
+
+
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 51451)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-05 17:27:47 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1493)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-05 17:28:58 +0300
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 17:28:58 +0300
+Processing by Api::UsersController#index as HTML
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.4ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+Completed 200 OK in 37ms (Views: 5.0ms | ActiveRecord: 0.8ms | Allocations: 4408)
+
+
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 45ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 5092)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-05 17:28:58 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 15ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1461)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-06-05 19:36:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 726)
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 6618)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 19:36:10 +0300
+  
+SyntaxError (/home/user/Development/Album-Photos/backend/app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 19:36:10 +0300
+  
+SyntaxError (/home/user/Development/Album-Photos/backend/app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 19:36:17 +0300
+  
+SyntaxError (/home/user/Development/Album-Photos/backend/app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/users_controller.rb:96: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 19:37:01 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 28ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 45240)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:38:29 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms | Allocations: 4173)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=1):
+  
+app/controllers/api/users_controller.rb:55:in `show'
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:39:11 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 3795)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=1):
+  
+app/controllers/api/users_controller.rb:55:in `show'
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:39:12 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 925)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=1):
+  
+app/controllers/api/users_controller.rb:55:in `show'
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:39:13 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 914)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=1):
+  
+app/controllers/api/users_controller.rb:55:in `show'
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:39:43 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms | Allocations: 4081)
+
+
+  
+NoMethodError (undefined method `call' for nil:NilClass):
+  
+app/controllers/api/users_controller.rb:56:in `show'
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:40:37 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms | Allocations: 3794)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=1):
+  
+app/controllers/api/users_controller.rb:55:in `show'
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:40:38 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 914)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Api::User with 'id'=1):
+  
+app/controllers/api/users_controller.rb:55:in `show'
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 19:40:50 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 4711)
+
+
+  [1m[36mCACHE Api::User Load (0.0ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `call' for #<ActiveRecord::Relation [#<Api::User id: 3, name: "Cynthia Misoi", username: "Cynthia", email: "crmisoi2k@gmail.com", created_at: "2024-06-04 01:55:26.996903000 +0000", updated_at: "2024-06-04 01:55:26.996903000 +0000">, #<Api::User id: 4, name: "Cindy Misoi", username: "Cindy", email: "misoic2k@gmail.com", created_at: "2024-06-04 01:55:40.984657000 +0000", updated_at: "2024-06-04 01:55:40.984657000 +0000">, #<Api::User id: 5, name: "Cynthia Jepkosgei Misoi", username: "Cynthia", email: "jepkosgeicy@ueab.ac.ke", created_at: "2024-06-04 06:19:41.975609000 +0000", updated_at: "2024-06-04 06:19:41.975609000 +0000">]>):
+  
+app/controllers/api/users_controller.rb:50:in `index'
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 19:40:51 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3218)
+
+
+  [1m[36mCACHE Api::User Load (0.0ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `call' for #<ActiveRecord::Relation [#<Api::User id: 3, name: "Cynthia Misoi", username: "Cynthia", email: "crmisoi2k@gmail.com", created_at: "2024-06-04 01:55:26.996903000 +0000", updated_at: "2024-06-04 01:55:26.996903000 +0000">, #<Api::User id: 4, name: "Cindy Misoi", username: "Cindy", email: "misoic2k@gmail.com", created_at: "2024-06-04 01:55:40.984657000 +0000", updated_at: "2024-06-04 01:55:40.984657000 +0000">, #<Api::User id: 5, name: "Cynthia Jepkosgei Misoi", username: "Cynthia", email: "jepkosgeicy@ueab.ac.ke", created_at: "2024-06-04 06:19:41.975609000 +0000", updated_at: "2024-06-04 06:19:41.975609000 +0000">]>):
+  
+app/controllers/api/users_controller.rb:50:in `index'
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 19:41:09 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 7029)
+
+
+  [1m[36mCACHE Api::User Load (0.0ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `call' for #<ActiveRecord::Relation [#<Api::User id: 3, name: "Cynthia Misoi", username: "Cynthia", email: "crmisoi2k@gmail.com", created_at: "2024-06-04 01:55:26.996903000 +0000", updated_at: "2024-06-04 01:55:26.996903000 +0000">, #<Api::User id: 4, name: "Cindy Misoi", username: "Cindy", email: "misoic2k@gmail.com", created_at: "2024-06-04 01:55:40.984657000 +0000", updated_at: "2024-06-04 01:55:40.984657000 +0000">, #<Api::User id: 5, name: "Cynthia Jepkosgei Misoi", username: "Cynthia", email: "jepkosgeicy@ueab.ac.ke", created_at: "2024-06-04 06:19:41.975609000 +0000", updated_at: "2024-06-04 06:19:41.975609000 +0000">]>):
+  
+app/controllers/api/users_controller.rb:50:in `index'
+Started GET "/api/users" for 127.0.0.1 at 2024-06-05 19:41:34 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:50:in `index'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 13056)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:42:00 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3349)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:42:04 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:55:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 584)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:43:11 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:56:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3345)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:43:12 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:56:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 584)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:43:13 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:56:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 583)
+
+
+Started GET "/api/users/" for 127.0.0.1 at 2024-06-05 19:45:10 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 12958)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-05 19:45:16 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:56:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:57:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 2080)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-05 19:45:19 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:56:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 584)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-06 10:15:02 +0300
+Started GET "/api/users/null" for 127.0.0.1 at 2024-06-06 10:15:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"null"}
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 12ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 9116)
+
+
+  [1m[36mApi::User Load (6.6ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 1409ms (Views: 0.5ms | ActiveRecord: 7.3ms | Allocations: 22368)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-06 10:15:04 +0300
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:15:04 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+Completed 200 OK in 27ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 23886)
+
+
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 39ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 28987)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:15:04 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1492)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:16:00 +0300
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-06 10:16:00 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1494)
+
+
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1544)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:16:00 +0300
+Started GET "/api/users" for 127.0.0.1 at 2024-06-06 10:16:00 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1502)
+
+
+Processing by Api::UsersController#index as HTML
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:16:00 +0300
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 30ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 3405)
+
+
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1461)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:16:03 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1651)
+
+
+Started GET "/api/users/4" for 127.0.0.1 at 2024-06-06 10:16:03 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1595)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:16:06 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1504)
+
+
+Started GET "/api/albums/1" for 127.0.0.1 at 2024-06-06 10:16:06 +0300
+Processing by Api::AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/albums_controller.rb:14:in `show'
+  [1m[36mApi::Photo Load (0.2ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 1]]
+  ↳ app/controllers/api/albums_controller.rb:16:in `show'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 19325)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:16:09 +0300
+Started GET "/api/users" for 127.0.0.1 at 2024-06-06 10:16:09 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1499)
+
+
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 3319)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:16:10 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1547)
+
+
+Started GET "/api/photos" for 127.0.0.1 at 2024-06-06 10:16:10 +0300
+Processing by Api::PhotosController#index as HTML
+  [1m[36mApi::Photo Load (0.2ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos"[0m
+  ↳ app/controllers/api/photos_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 944)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-06 10:16:10 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1462)
+
+
+Started GET "/api/albums" for 127.0.0.1 at 2024-06-06 10:16:10 +0300
+Processing by Api::AlbumsController#index as HTML
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums"[0m
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.2ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 1]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 2]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 3]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 3124)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 02:04:21 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Started GET "/api/albums" for 127.0.0.1 at 2024-06-07 02:04:21 +0300
+Processing by Api::AlbumsController#index as HTML
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums"[0m
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.7ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 1]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 2]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 3]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 3518)
+
+
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 6091)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 02:04:21 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (1.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1461)
+
+
+Started GET "/api/albums" for 127.0.0.1 at 2024-06-07 13:38:59 +0300
+Processing by Api::AlbumsController#index as HTML
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums"[0m
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.2ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 1]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.1ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 2]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+  [1m[36mApi::Photo Load (0.2ms)[0m  [1m[34mSELECT "api_photos".* FROM "api_photos" WHERE "api_photos"."api_album_id" = ?[0m  [["api_album_id", 3]]
+  ↳ app/controllers/api/albums_controller.rb:6:in `index'
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 13:38:59 +0300
+Completed 200 OK in 23ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 3476)
+
+
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.5ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.3ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 1519)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 13:38:59 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (1.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 18ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 1461)
+
+
+Started POST "/api/users/google" for 127.0.0.1 at 2024-06-07 13:43:23 +0300
+Processing by Api::UsersController#google as HTML
+  Parameters: {"token"=>"[FILTERED]", "user"=>{}}
+  [1m[36mApi::User Load (0.4ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."email" = ? LIMIT ?[0m  [["email", "crmisoi2k@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:30:in `google'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1824)
+
+
+Started GET "/api/users/null" for 127.0.0.1 at 2024-06-07 13:43:23 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"null"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 596)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 13:43:24 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1461)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 13:43:24 +0300
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 13:43:24 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.3ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 3384)
+
+
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1461)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-06-07 14:22:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rvm/gems/ruby-3.0.0/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 726)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 6618)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:22:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 14:22:26 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 8ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 5798)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 14:22:26 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 609)
+
+
+Started GET "/api/users/" for 127.0.0.1 at 2024-06-07 14:22:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:22:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:22:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:22:57 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 43093)
+
+
+Started GET "/api/users/1" for 127.0.0.1 at 2024-06-07 14:23:01 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1221)
+
+
+Started GET "/api/users/" for 127.0.0.1 at 2024-06-07 14:23:03 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 3320)
+
+
+Started GET "/api/users/" for 127.0.0.1 at 2024-06-07 14:23:06 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 3333)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/users/" for 127.0.0.1 at 2024-06-07 14:27:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 27ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 47840)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:27:44 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 3339)
+
+
+Started GET "/api/" for 127.0.0.1 at 2024-06-07 14:27:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/" for 127.0.0.1 at 2024-06-07 14:30:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.3ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 27ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 47839)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/" for 127.0.0.1 at 2024-06-07 14:30:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+Started GET "/api/" for 127.0.0.1 at 2024-06-07 14:30:45 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 80ms (Views: 0.5ms | ActiveRecord: 3.0ms | Allocations: 47948)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/" for 127.0.0.1 at 2024-06-07 14:35:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 30ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 47840)
+
+
+Started GET "/api" for 127.0.0.1 at 2024-06-07 14:36:03 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 3339)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:36:07 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 3333)
+
+
+Started GET "/api/" for 127.0.0.1 at 2024-06-07 14:36:13 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 3333)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-06-07 14:46:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 4457)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:46:05 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 30ms (Views: 0.8ms | ActiveRecord: 1.2ms | Allocations: 45186)
+
+
+Started GET "/" for 127.0.0.1 at 2024-06-07 14:46:10 +0300
+Processing by WelcomeController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 245)
+
+
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-06-07 14:50:45 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 4391)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:50:50 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 45186)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:53:23 +0300
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 14:53:23 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 3366)
+
+
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.2ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 2461)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 14:53:23 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1461)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 14:53:25 +0300
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:53:25 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1511)
+
+
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.0ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 3362)
+
+
+Started GET "/api/users/3" for 127.0.0.1 at 2024-06-07 14:53:25 +0300
+Processing by Api::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users" WHERE "api_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:60:in `show'
+  [1m[36mApi::Album Load (0.2ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:62:in `show'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1461)
+
+
+Started GET "/api/" for 127.0.0.1 at 2024-06-07 15:03:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+Started GET "/api" for 127.0.0.1 at 2024-06-07 15:03:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+Started GET "/" for 127.0.0.1 at 2024-06-07 15:03:16 +0300
+Processing by WelcomeController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 246)
+
+

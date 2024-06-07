@@ -7,10 +7,10 @@ class Api::UsersController < ApplicationController
     
       begin
         # Verify JWT token
-        payload = Google::Auth::IDTokens.verify_oidc(token, aud: ENV['GOOGLE_CLIENT_ID'])
+        payload = Google::Auth::IDTokens.verify_oidc(token, aud: "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com")
     
         # Check audience claim
-        if payload['aud'] != ENV['GOOGLE_CLIENT_ID']
+        if payload['aud'] != "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com"
           render json: { error: 'Invalid audience' }, status: :unauthorized
           return
         end
