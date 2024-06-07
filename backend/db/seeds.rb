@@ -3,6 +3,7 @@ puts "Start seeding..."
 # Define the data to be seeded for users
 # api_users = [
 #   # Add more user data as needed
+#   { id: 1, name: "Cynthia Misoi", username: "Cynthia", email: "crmisoi2k@gmail.com" },
 # ]
 
 # Create users within the Api namespace

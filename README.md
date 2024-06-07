@@ -29,9 +29,6 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  [![Logo](images/logo.png)](https://github.com/CindyMisoi/Album-Photos)
-</div
 
 <h3 align="center">Foto.</h3>
 
@@ -215,10 +212,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Project Link: [https://github.com/CindyMisoi/Album-Photos](https://github.com/CindyMisoi/Album-Photos) - Email: crmisoi2k@gmail.com
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
