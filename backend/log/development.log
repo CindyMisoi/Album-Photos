@@ -43154,3 +43154,35 @@ Processing by Api::UsersController#index as HTML
 Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 3333)
 
 
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_CLIENT_ID[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 127.0.0.1 at 2024-06-07 14:46:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 4457)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2024-06-07 14:46:05 +0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mApi::User Load (0.1ms)[0m  [1m[34mSELECT "api_users".* FROM "api_users"[0m
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+  [1m[36mApi::Album Load (0.1ms)[0m  [1m[34mSELECT "api_albums".* FROM "api_albums" WHERE "api_albums"."api_user_id" = ?[0m  [["api_user_id", 5]]
+  ↳ app/controllers/api/users_controller.rb:51:in `index'
+Completed 200 OK in 30ms (Views: 0.8ms | ActiveRecord: 1.2ms | Allocations: 45186)
+
+
+Started GET "/" for 127.0.0.1 at 2024-06-07 14:46:10 +0300
+Processing by WelcomeController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 245)
+
+
