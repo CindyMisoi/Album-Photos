@@ -13,7 +13,6 @@ const LoginForm = () => {
 
   const navigate = useNavigate();
 
-
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -41,16 +40,10 @@ const LoginForm = () => {
     setErrorMessage("");
   };
 
-  const CLIENT_ID = "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com";
-
 
   const handleCredentialResponse = useCallback(async (response, setAuth) => {
     const Jwt_token = response.credential;
     console.log("Encoded JWT ID token: " + Jwt_token);
-
-    // Decode JWT token using atob
-    const decodedToken = JSON.parse(atob(Jwt_token.split('.')[1]));
-    console.log("Decoded JWT token:", decodedToken);
   
     // Store token in session storage
     sessionStorage.setItem("Jwt_token", Jwt_token);
