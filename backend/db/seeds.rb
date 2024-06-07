@@ -12,9 +12,7 @@ puts "Start seeding..."
 
 # Define the data to be seeded for albums
 api_albums = [
-  { api_user_id: 4, album_title: "Cindy's Photos", album_thumbnail: "https://images.unsplash.com/photo-1594737996820-af7654631790?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D" },
-  { api_user_id: 3, album_title: "Cat Photos" , album_thumbnail: "https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0fGVufDB8fDB8fHww"},
-  { api_user_id: 4, album_title: "Dog Photos", album_thumbnail: "https://images.unsplash.com/photo-1552053831-71594a27632d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fHww" },
+  { api_user_id: 3, album_title: "Cindy's Photos", album_thumbnail: "https://images.unsplash.com/photo-1594737996820-af7654631790?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D" }
   # Add more album data as needed
 ]
 
