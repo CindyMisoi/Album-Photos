@@ -12,7 +12,6 @@ const LoginForm = () => {
   const { setAuth } = useContext(AuthContext);
 
   const navigate = useNavigate();
-  const CLIENT_ID = "1027981653641-s2pt1du3d0osqm0itpbsubd2c67e2qoq.apps.googleusercontent.com";
 
 
   const onSubmit = async (e) => {
